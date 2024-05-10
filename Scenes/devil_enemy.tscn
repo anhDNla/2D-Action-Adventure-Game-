@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://t7k0aoiwypd5"]
+
+[ext_resource type="Script" path="res://Scripts/devil_enemy.gd" id="1_fdvvi"]
+[ext_resource type="Texture2D" uid="uid://ddb7nxck1rqff" path="res://Assets/Dungeon Assets/devil_.png" id="1_pqm2s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ow5f"]
+atlas = ExtResource("1_pqm2s")
+region = Rect2(0, 56, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbc1k"]
+atlas = ExtResource("1_pqm2s")
+region = Rect2(28, 56, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pqvw"]
+atlas = ExtResource("1_pqm2s")
+region = Rect2(56, 56, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bmv7"]
+atlas = ExtResource("1_pqm2s")
+region = Rect2(84, 56, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6x2n"]
+atlas = ExtResource("1_pqm2s")
+region = Rect2(112, 56, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ud13o"]
+atlas = ExtResource("1_pqm2s")
+region = Rect2(140, 56, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcph5"]
+atlas = ExtResource("1_pqm2s")
+region = Rect2(168, 56, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqvw2"]
+atlas = ExtResource("1_pqm2s")
+region = Rect2(196, 56, 28, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ayx6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ow5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbc1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pqvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bmv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6x2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ud13o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcph5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqvw2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Enemy1-Move" type="Node2D"]
+script = ExtResource("1_fdvvi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -11)
+scale = Vector2(0.955357, 0.852679)
+sprite_frames = SubResource("SpriteFrames_4ayx6")
+autoplay = "default"
+frame_progress = 0.69875
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, -7)
+target_position = Vector2(8, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, -7)
+target_position = Vector2(-9, 0)

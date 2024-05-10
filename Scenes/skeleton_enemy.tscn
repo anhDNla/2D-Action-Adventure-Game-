@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://ubkh822o5t41"]
+
+[ext_resource type="Script" path="res://Scripts/skeleton_enemy.gd" id="1_arqqp"]
+[ext_resource type="Texture2D" uid="uid://da1xus0gjgv5w" path="res://Assets/Dungeon Assets/skeleton_.png" id="1_wrnix"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypa7m"]
+atlas = ExtResource("1_wrnix")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2l4qf"]
+atlas = ExtResource("1_wrnix")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yy1ro"]
+atlas = ExtResource("1_wrnix")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3kba"]
+atlas = ExtResource("1_wrnix")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fp1ao"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypa7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2l4qf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yy1ro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3kba")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="skeleton_enemy" type="Node2D"]
+script = ExtResource("1_arqqp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_fp1ao")
+autoplay = "default"
+frame_progress = 0.353265
+flip_h = true
+
+[node name="RayCastRight" type="RayCast2D" parent="AnimatedSprite2D"]
+position = Vector2(0, 5)
+target_position = Vector2(12, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="AnimatedSprite2D"]
+position = Vector2(0, 5)
+target_position = Vector2(-10, 0)

@@ -8,6 +8,7 @@ const JUMP_VELOCITY = -300.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var spawn_point = %SpawnPoint
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -43,3 +44,21 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+func death_tween():
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
+	await tween.finished
+	global_position = spawn_point.global_position
+	await get_tree().create_timer(0.3).timeout
+	respawn_tween()
+
+func respawn_tween():
+	var tween = create_tween()
+	tween.stop(); tween.play()
+	tween.tween_property(self, "scale", Vector2.ONE, 0.15) 
+
+
+func _on_collision_body_entered(_body):
+	if _body.is_in_group("OutOfBounds"):
+		death_tween()

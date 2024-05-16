@@ -1,5 +1,8 @@
-TileMap
 CollisionShape2D
+Area2D
+Marker2D
+TileMap
+Node2D
 StaticBody2D
 Camera2D
 AnimatedSprite2D

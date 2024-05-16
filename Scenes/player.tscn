@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://vs21iad1vuyu"]
+[gd_scene load_steps=31 format=3 uid="uid://vs21iad1vuyu"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_i4gck"]
 [ext_resource type="Texture2D" uid="uid://blq3t8bqis7ly" path="res://Assets/Camelot/knight.png" id="1_vr5ny"]
@@ -200,7 +200,10 @@ animations = [{
 radius = 4.0
 height = 16.0
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0djy"]
+size = Vector2(15, 20)
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_i4gck")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -214,3 +217,11 @@ frame_progress = 0.616711
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -9)
 shape = SubResource("CapsuleShape2D_w378c")
+
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+position = Vector2(-0.5, -9)
+shape = SubResource("RectangleShape2D_b0djy")
+
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

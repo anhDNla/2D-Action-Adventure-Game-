@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dijoeqtsvo0ot"]
+
+[ext_resource type="Texture2D" uid="uid://kf4dteuulimu" path="res://Assets/Dungeon Assets/goblinKing_.png" id="1_6o7jb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elu8u"]
+atlas = ExtResource("1_6o7jb")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jflyy"]
+atlas = ExtResource("1_6o7jb")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e17ij"]
+atlas = ExtResource("1_6o7jb")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqei1"]
+atlas = ExtResource("1_6o7jb")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ievlr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elu8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jflyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e17ij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqei1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="goblinKing_enemy" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_ievlr")
+autoplay = "default"
+frame_progress = 0.325044

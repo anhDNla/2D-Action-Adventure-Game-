@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://tovrxmkqm3dp"]
+
+[ext_resource type="Texture2D" uid="uid://dyf8tuq7md67j" path="res://Assets/Dungeon Assets/dragon_.png" id="1_t2exu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1whxe"]
+atlas = ExtResource("1_t2exu")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj10n"]
+atlas = ExtResource("1_t2exu")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pufw0"]
+atlas = ExtResource("1_t2exu")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwp61"]
+atlas = ExtResource("1_t2exu")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1mxia"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1whxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj10n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pufw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwp61")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="dragon_enemy" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_1mxia")
+autoplay = "default"
+frame_progress = 0.329235

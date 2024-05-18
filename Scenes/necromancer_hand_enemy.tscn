@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://cdagkegf6xyx7"]
+
+[ext_resource type="Texture2D" uid="uid://c6ambtoge7qgy" path="res://Assets/Dungeon Assets/necromancer_.png" id="1_3cdde"]
+[ext_resource type="Script" path="res://Scripts/necromancer_hand_enemy.gd" id="1_n4nde"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nf5ys"]
+atlas = ExtResource("1_3cdde")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3a06i"]
+atlas = ExtResource("1_3cdde")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a145a"]
+atlas = ExtResource("1_3cdde")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei2wm"]
+atlas = ExtResource("1_3cdde")
+region = Rect2(120, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yitp"]
+atlas = ExtResource("1_3cdde")
+region = Rect2(168, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q85qc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nf5ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3a06i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a145a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei2wm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yitp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="necromancerHand_enemy" type="Node2D"]
+script = ExtResource("1_n4nde")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -14)
+scale = Vector2(1, 1.08333)
+sprite_frames = SubResource("SpriteFrames_q85qc")
+frame_progress = 0.609059
+
+[node name="RayCastUp" type="RayCast2D" parent="."]
+position = Vector2(0, -9)
+target_position = Vector2(0, -10)
+
+[node name="RayCastDown" type="RayCast2D" parent="."]
+position = Vector2(0, -9)
+target_position = Vector2(0, 8)

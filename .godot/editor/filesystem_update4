@@ -1,10 +1,5 @@
 res://Scenes/player.tscn
 res://Scenes/main.tscn
 res://Scenes/knight_enemy.tscn
-res://Scenes/necromancer_hand_enemy.tscn
-res://Scenes/dragon_enemy.tscn
-res://Scenes/ghost_enemy.tscn
-res://Scripts/knight_enemy.gd
 res://Scenes/hobgoblin_enemy.tscn
-res://Scripts/hobgoblin_enemy.gd
-res://Scripts/necromancer_hand_enemy.gd
+res://Scenes/necromancer_hand_enemy.tscn

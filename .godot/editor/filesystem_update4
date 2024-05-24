@@ -2,3 +2,5 @@ res://Scenes/player.tscn
 res://Scenes/main.tscn
 res://Scenes/hobgoblin_enemy.tscn
 res://Scenes/necromancer_hand_enemy.tscn
+res://Scripts/player.gd
+res://Scenes/Weapon.gd

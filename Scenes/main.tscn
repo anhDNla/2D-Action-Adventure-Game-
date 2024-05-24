@@ -840,12 +840,15 @@ position_smoothing_enabled = true
 position = Vector2(413, -160)
 
 [node name="slime" parent="." groups=["Enemy"] instance=ExtResource("4_780si")]
+texture_filter = 1
 position = Vector2(-248, -47)
 
 [node name="ghost_enemy" parent="." groups=["Enemy"] instance=ExtResource("5_quala")]
+texture_filter = 1
 position = Vector2(-103, -143)
 
 [node name="skeleton_enemy" parent="." groups=["Enemy"] instance=ExtResource("6_hv21f")]
+texture_filter = 1
 position = Vector2(184, -159)
 
 [node name="Level" type="Node2D" parent="."]
@@ -866,13 +869,17 @@ unique_name_in_owner = true
 position = Vector2(-19, -42)
 
 [node name="necromancerHand_enemy" parent="." instance=ExtResource("7_6j6kx")]
+texture_filter = 1
 position = Vector2(-184, -51)
 
 [node name="dragon_enemy" parent="." instance=ExtResource("8_kg7n8")]
+texture_filter = 1
 position = Vector2(-40, 1)
 
 [node name="knight_enemy" parent="." instance=ExtResource("9_l05ol")]
+texture_filter = 1
 position = Vector2(-170, -207)
 
 [node name="hobgoblin_enemy" parent="." instance=ExtResource("10_a43ft")]
+texture_filter = 1
 position = Vector2(38, 1)

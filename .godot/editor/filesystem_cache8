@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716053332
+::res://::1716572245
 icon.svg::CompressedTexture2D::396869834221710768::1713031830::1716052403::1::::<><>::
 ::res://Assets/::1714929399
 ::res://Assets/Camelot/::1714931556
@@ -370,24 +370,24 @@ Idle.png::CompressedTexture2D::4353863381689845188::1714929400::1714929400::1:::
 ::res://Assets/Pixel Adventure/Free/Traps/Trampoline/::1714929400
 Idle.png::CompressedTexture2D::3450496921364304011::1714929400::1714929400::1::::<><>::
 Jump (28x28).png::CompressedTexture2D::3973023219560694772::1714929400::1714929400::1::::<><>::
-::res://Scenes/::1716052409
+::res://Scenes/::1716572215
 devil_enemy.tscn::PackedScene::1400299954048920544::1715538805::0::1::::<><>::res://Scripts/devil_enemy.gd<>uid://ddb7nxck1rqff::::res://Assets/Dungeon Assets/devil_.png
 dragon_enemy.tscn::PackedScene::1363795960074877189::1716052393::0::1::::<><>::uid://dyf8tuq7md67j::::res://Assets/Dungeon Assets/dragon_.png
 ghost_enemy.tscn::PackedScene::3916115870238193318::1715538805::0::1::::<><>::uid://bc8gi6khmthwx::::res://Assets/Dungeon Assets/ghost_.png<>res://Scripts/ghost_enemy.gd
 goblin_king_enemy.tscn::PackedScene::7740210251615816851::1716052393::0::1::::<><>::uid://kf4dteuulimu::::res://Assets/Dungeon Assets/goblinKing_.png
-hobgoblin_enemy.tscn::PackedScene::15695148411861874::1716052409::0::1::::<><>::res://Scripts/hobgoblin_enemy.gd<>uid://dgjc2ctdxdp48::::res://Assets/Dungeon Assets/hobgoblin_.png
+hobgoblin_enemy.tscn::PackedScene::15695148411861874::1716572215::0::1::::<><>::res://Scripts/hobgoblin_enemy.gd<>uid://dgjc2ctdxdp48::::res://Assets/Dungeon Assets/hobgoblin_.png
 knight_enemy.tscn::PackedScene::1303687411701622800::1716052409::0::1::::<><>::res://Scripts/knight_enemy.gd<>uid://nj0pkng3ritp::::res://Assets/Dungeon Assets/knight_.png
-main.tscn::PackedScene::2355824016103362418::1716052409::0::1::::<><>::uid://vs21iad1vuyu::::res://Scenes/player.tscn<>uid://bx7dju6w6n10m::::res://Assets/Camelot/world_tileset.png<>uid://t7k0aoiwypd5::::res://Scenes/devil_enemy.tscn<>uid://b0ifdfk65pqee::::res://Scenes/slime_enemy.tscn<>uid://bv184d2kqu2es::::res://Scenes/ghost_enemy.tscn<>uid://ubkh822o5t41::::res://Scenes/skeleton_enemy.tscn<>uid://cdagkegf6xyx7::::res://Scenes/necromancer_hand_enemy.tscn<>uid://tovrxmkqm3dp::::res://Scenes/dragon_enemy.tscn<>uid://strsnvkr2hh5::::res://Scenes/knight_enemy.tscn<>uid://huq5kjnuiys::::res://Scenes/hobgoblin_enemy.tscn
-necromancer_hand_enemy.tscn::PackedScene::4983790277827710166::1716052409::0::1::::<><>::uid://c6ambtoge7qgy::::res://Assets/Dungeon Assets/necromancer_.png<>res://Scripts/necromancer_hand_enemy.gd
-player.tscn::PackedScene::1512810725776679356::1716052409::0::1::::<><>::res://Scripts/player.gd<>uid://blq3t8bqis7ly::::res://Assets/Camelot/knight.png
+main.tscn::PackedScene::2355824016103362418::1716572215::0::1::::<><>::uid://vs21iad1vuyu::::res://Scenes/player.tscn<>uid://bx7dju6w6n10m::::res://Assets/Camelot/world_tileset.png<>uid://t7k0aoiwypd5::::res://Scenes/devil_enemy.tscn<>uid://b0ifdfk65pqee::::res://Scenes/slime_enemy.tscn<>uid://bv184d2kqu2es::::res://Scenes/ghost_enemy.tscn<>uid://ubkh822o5t41::::res://Scenes/skeleton_enemy.tscn<>uid://cdagkegf6xyx7::::res://Scenes/necromancer_hand_enemy.tscn<>uid://tovrxmkqm3dp::::res://Scenes/dragon_enemy.tscn<>uid://strsnvkr2hh5::::res://Scenes/knight_enemy.tscn<>uid://huq5kjnuiys::::res://Scenes/hobgoblin_enemy.tscn
+necromancer_hand_enemy.tscn::PackedScene::4983790277827710166::1716572215::0::1::::<><>::uid://c6ambtoge7qgy::::res://Assets/Dungeon Assets/necromancer_.png<>res://Scripts/necromancer_hand_enemy.gd
+player.tscn::PackedScene::1512810725776679356::1716572215::0::1::::<><>::res://Scripts/player.gd<>uid://blq3t8bqis7ly::::res://Assets/Camelot/knight.png
 skeleton_enemy.tscn::PackedScene::1406462697226647600::1715538805::0::1::::<><>::res://Scripts/skeleton_enemy.gd<>uid://da1xus0gjgv5w::::res://Assets/Dungeon Assets/skeleton_.png
 slime_enemy.tscn::PackedScene::4157966018535927172::1715538805::0::1::::<><>::uid://dnykwh5x4p1jn::::res://Assets/Dungeon Assets/slime_.png
 world_tileset.png::CompressedTexture2D::903322419017236224::1714931512::1714931513::1::::<><>::
-::res://Scripts/::1716052393
+::res://Scripts/::1716571911
 devil_enemy.gd::GDScript::-1::1715538805::0::1::::<>Node2D<>::
 ghost_enemy.gd::GDScript::-1::1715538805::0::1::::<>Node2D<>::
 hobgoblin_enemy.gd::GDScript::-1::1716052393::0::1::::<>Node2D<>::
 knight_enemy.gd::GDScript::-1::1716052393::0::1::::<>Node2D<>::
 necromancer_hand_enemy.gd::GDScript::-1::1716052393::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1716051882::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1716571911::0::1::::<>CharacterBody2D<>::
 skeleton_enemy.gd::GDScript::-1::1715538805::0::1::::<>Node2D<>::

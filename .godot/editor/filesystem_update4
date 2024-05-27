@@ -1,5 +1,4 @@
 res://Scenes/player.tscn
-res://Scripts/devil_enemy.gd
 res://Scenes/main.tscn
-res://Scenes/devil_enemy.tscn
-res://Scripts/player.gd
+res://Scenes/necromancer_hand_enemy.tscn
+res://Scenes/Weapon.gd

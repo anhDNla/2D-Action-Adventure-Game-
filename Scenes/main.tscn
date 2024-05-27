@@ -881,5 +881,4 @@ texture_filter = 1
 position = Vector2(-170, -207)
 
 [node name="hobgoblin_enemy" parent="." instance=ExtResource("10_a43ft")]
-texture_filter = 1
 position = Vector2(38, 1)

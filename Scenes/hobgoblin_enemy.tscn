@@ -54,6 +54,7 @@ animations = [{
 }]
 
 [node name="hobgoblin_enemy" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_8yg8j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -17,3 +17,6 @@ func _process(delta):
 		direction = -1  # Move up
 		animated_sprite_2d.flip_h = false;
 	position.y += direction * SPEED * delta
+
+func handle_hit():
+	print("enemy was hit!")

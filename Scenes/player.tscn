@@ -177,6 +177,45 @@ height = 16.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b0djy"]
 size = Vector2(15, 20)
 
+[sub_resource type="Animation" id="Animation_ieb7t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7, -14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.397935]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_q3ahr"]
 resource_name = "SwingAnimation"
 length = 0.3
@@ -217,45 +256,6 @@ tracks/2/keys = {
 "values": [false, true]
 }
 
-[sub_resource type="Animation" id="Animation_ieb7t"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(7, -14)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.397935]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0bo6h"]
 _data = {
 "RESET": SubResource("Animation_ieb7t"),
@@ -285,7 +285,7 @@ shape = SubResource("CapsuleShape2D_w378c")
 position = Vector2(-0.5, -9)
 shape = SubResource("RectangleShape2D_b0djy")
 
-[node name="Weapon" type="Area2D" parent="."]
+[node name="Weapon" type="Area2D" parent="." groups=["Weapon"]]
 script = ExtResource("3_onaxi")
 
 [node name="Sprite2D" type="Sprite2D" parent="Weapon"]
@@ -302,8 +302,9 @@ libraries = {
 "": SubResource("AnimationLibrary_0bo6h")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon" groups=["Weapon"]]
 position = Vector2(14, -9)
 shape = SubResource("RectangleShape2D_ugv1e")
 
+[connection signal="area_entered" from="Collision" to="." method="_on_collision_area_entered"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

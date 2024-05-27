@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdagkegf6xyx7"]
+[gd_scene load_steps=10 format=3 uid="uid://b5ub3d5344dpu"]
 
 [ext_resource type="Texture2D" uid="uid://c6ambtoge7qgy" path="res://Assets/Dungeon Assets/necromancer_.png" id="1_3cdde"]
 [ext_resource type="Script" path="res://Scripts/necromancer_hand_enemy.gd" id="1_n4nde"]
@@ -46,7 +46,10 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="necromancerHand_enemy" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7362"]
+size = Vector2(13, 19)
+
+[node name="necromancerHand_enemy" type="Node2D" groups=["Enemy"]]
 script = ExtResource("1_n4nde")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -62,3 +65,9 @@ target_position = Vector2(0, -10)
 [node name="RayCastDown" type="RayCast2D" parent="."]
 position = Vector2(0, -9)
 target_position = Vector2(0, 8)
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
+position = Vector2(-0.5, -10.5)
+shape = SubResource("RectangleShape2D_x7362")

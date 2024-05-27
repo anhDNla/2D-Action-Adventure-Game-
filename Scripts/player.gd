@@ -68,3 +68,7 @@ func respawn_tween():
 func _on_collision_body_entered(_body):
 	if _body.is_in_group("OutOfBounds"):
 		death_tween()
+		
+func _on_collision_area_entered(_area):
+	if _area.is_in_group("Enemy"):
+		print("Collision")

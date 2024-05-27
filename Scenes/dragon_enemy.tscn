@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://tovrxmkqm3dp"]
+[gd_scene load_steps=8 format=3 uid="uid://tovrxmkqm3dp"]
 
 [ext_resource type="Texture2D" uid="uid://dyf8tuq7md67j" path="res://Assets/Dungeon Assets/dragon_.png" id="1_t2exu"]
 
@@ -38,10 +38,19 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="dragon_enemy" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owqjm"]
+size = Vector2(14, 18)
+
+[node name="dragon_enemy" type="Node2D" groups=["Enemy"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_1mxia")
 autoplay = "default"
 frame_progress = 0.329235
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_owqjm")

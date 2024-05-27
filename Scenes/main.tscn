@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b0ifdfk65pqee" path="res://Scenes/slime_enemy.tscn" id="4_780si"]
 [ext_resource type="PackedScene" uid="uid://bv184d2kqu2es" path="res://Scenes/ghost_enemy.tscn" id="5_quala"]
 [ext_resource type="PackedScene" uid="uid://ubkh822o5t41" path="res://Scenes/skeleton_enemy.tscn" id="6_hv21f"]
-[ext_resource type="PackedScene" uid="uid://cdagkegf6xyx7" path="res://Scenes/necromancer_hand_enemy.tscn" id="7_6j6kx"]
+[ext_resource type="PackedScene" uid="uid://b5ub3d5344dpu" path="res://Scenes/necromancer_hand_enemy.tscn" id="7_6j6kx"]
 [ext_resource type="PackedScene" uid="uid://tovrxmkqm3dp" path="res://Scenes/dragon_enemy.tscn" id="8_kg7n8"]
 [ext_resource type="PackedScene" uid="uid://strsnvkr2hh5" path="res://Scenes/knight_enemy.tscn" id="9_l05ol"]
 [ext_resource type="PackedScene" uid="uid://huq5kjnuiys" path="res://Scenes/hobgoblin_enemy.tscn" id="10_a43ft"]
@@ -836,18 +836,18 @@ limit_bottom = 60
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="Enemy1-Move" parent="." groups=["Enemy"] instance=ExtResource("3_216su")]
+[node name="Enemy1-Move" parent="." instance=ExtResource("3_216su")]
 position = Vector2(413, -160)
 
-[node name="slime" parent="." groups=["Enemy"] instance=ExtResource("4_780si")]
+[node name="slime" parent="." instance=ExtResource("4_780si")]
 texture_filter = 1
 position = Vector2(-248, -47)
 
-[node name="ghost_enemy" parent="." groups=["Enemy"] instance=ExtResource("5_quala")]
+[node name="ghost_enemy" parent="." instance=ExtResource("5_quala")]
 texture_filter = 1
 position = Vector2(-103, -143)
 
-[node name="skeleton_enemy" parent="." groups=["Enemy"] instance=ExtResource("6_hv21f")]
+[node name="skeleton_enemy" parent="." instance=ExtResource("6_hv21f")]
 texture_filter = 1
 position = Vector2(184, -159)
 

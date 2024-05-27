@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bv184d2kqu2es"]
+[gd_scene load_steps=9 format=3 uid="uid://bv184d2kqu2es"]
 
 [ext_resource type="Texture2D" uid="uid://bc8gi6khmthwx" path="res://Assets/Dungeon Assets/ghost_.png" id="1_5fxwx"]
 [ext_resource type="Script" path="res://Scripts/ghost_enemy.gd" id="1_22u7p"]
@@ -39,7 +39,10 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="ghost_enemy" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3i3ge"]
+size = Vector2(14, 6)
+
+[node name="ghost_enemy" type="Node2D" groups=["Enemy"]]
 script = ExtResource("1_22u7p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -56,3 +59,9 @@ target_position = Vector2(10, 0)
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, -5)
 target_position = Vector2(-11, -1)
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_3i3ge")

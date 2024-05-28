@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://vs21iad1vuyu"]
+[gd_scene load_steps=34 format=3 uid="uid://vs21iad1vuyu"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_i4gck"]
 [ext_resource type="Texture2D" uid="uid://blq3t8bqis7ly" path="res://Assets/Camelot/knight.png" id="1_vr5ny"]
@@ -182,7 +182,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/path = NodePath("RightSword:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -194,7 +194,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/path = NodePath("RightSword:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -206,7 +206,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:visible")
+tracks/2/path = NodePath("RightSword:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -234,7 +234,7 @@ length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/path = NodePath("RightSword:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -246,7 +246,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/path = NodePath("RightSword:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -258,7 +258,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:visible")
+tracks/2/path = NodePath("RightSword:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -289,6 +289,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugv1e"]
 size = Vector2(14, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qsswu"]
+size = Vector2(14, 20)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_i4gck")
 
@@ -312,7 +315,7 @@ shape = SubResource("RectangleShape2D_b0djy")
 [node name="Weapon" type="Area2D" parent="."]
 script = ExtResource("3_onaxi")
 
-[node name="Sprite2D" type="Sprite2D" parent="Weapon"]
+[node name="RightSword" type="Sprite2D" parent="Weapon"]
 texture_filter = 1
 position = Vector2(7, -14)
 rotation = 0.397935
@@ -331,5 +334,21 @@ position = Vector2(14, -9)
 shape = SubResource("RectangleShape2D_ugv1e")
 disabled = true
 
+[node name="LeftSword" type="Sprite2D" parent="Weapon"]
+visible = false
+texture_filter = 1
+position = Vector2(-8.09642, -14.2294)
+rotation = 5.88525
+scale = Vector2(1.0763, 1.00245)
+texture = ExtResource("3_dhs1c")
+region_enabled = true
+region_rect = Rect2(26.483, 2.7567, 6.75652, 19.0534)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Weapon"]
+position = Vector2(-15, -9)
+shape = SubResource("RectangleShape2D_qsswu")
+disabled = true
+
+[connection signal="area_entered" from="Collision" to="." method="_on_collision_area_entered"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
-[connection signal="body_entered" from="Weapon" to="Weapon" method="_on_body_entered"]
+[connection signal="area_entered" from="Weapon" to="Weapon" method="_on_area_entered"]

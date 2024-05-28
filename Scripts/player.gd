@@ -7,6 +7,8 @@ const JUMP_VELOCITY = -300.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var direction
+
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var spawn_point = %SpawnPoint
 @onready var weapon = $Weapon
@@ -21,13 +23,15 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	var direction = Input.get_axis("move_left", "move_right")
+	direction = Input.get_axis("move_left", "move_right")
 	
 	#Flip the Sprite
 	if direction > 0:
 		animated_sprite.flip_h = false
+		weapon.toggleRight()
 	elif direction < 0:
 		animated_sprite.flip_h = true 
+		weapon.toggleLeft()
 	
 	#Play animations
 	if is_on_floor():
@@ -71,4 +75,4 @@ func _on_collision_body_entered(_body):
 		
 func _on_collision_area_entered(_area):
 	if _area.is_in_group("Enemy"):
-		print("Collision")
+		death_tween()

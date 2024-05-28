@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://tovrxmkqm3dp"]
+[gd_scene load_steps=9 format=3 uid="uid://tovrxmkqm3dp"]
 
 [ext_resource type="Texture2D" uid="uid://dyf8tuq7md67j" path="res://Assets/Dungeon Assets/dragon_.png" id="1_t2exu"]
+[ext_resource type="Script" path="res://Scenes/dragon_enemy.gd" id="1_x6mej"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1whxe"]
 atlas = ExtResource("1_t2exu")
@@ -42,6 +43,7 @@ animations = [{
 size = Vector2(14, 18)
 
 [node name="dragon_enemy" type="Node2D" groups=["Enemy"]]
+script = ExtResource("1_x6mej")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)

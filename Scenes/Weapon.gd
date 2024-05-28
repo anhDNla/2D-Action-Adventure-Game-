@@ -1,16 +1,27 @@
 extends Area2D
 
+var direction = 'R'
+
 # Export variable with a default value
 @export var damage: int = 10
 
 # Onready variable for animation
 @onready var anim = $Swing
+func toggleRight():
+	$LeftSword.visible = false
+	$RightSword.visible = true
+	direction = 'R'
+
+func toggleLeft():
+	$RightSword.visible = false
+	$LeftSword.visible = true
+	direction = 'L'
 
 # Attack function to play the animation
 func attack():
-	anim.play("SwingAnimation")
-
-
-func _on_body_entered(body):
-	if body.has_method("handle_hit"):
-		body.handle_hit(damage)
+	if(direction == 'R'):
+		anim.play("SwingAnimation")
+		
+func _on_area_entered(area):
+	if area.get_parent().has_method("handle_hit"):
+		area.get_parent().handle_hit(damage)

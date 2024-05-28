@@ -1,6 +1,7 @@
 extends Node2D
 
 const SPEED = 60
+var HEALTH = 40
 
 # Assuming you have RayCast nodes set up for up and down directions
 @onready var ray_cast_up = $RayCastUp
@@ -18,5 +19,8 @@ func _process(delta):
 		animated_sprite_2d.flip_h = false;
 	position.y += direction * SPEED * delta
 
-func handle_hit():
-	print("enemy was hit!")
+func handle_hit(damage):
+	HEALTH = HEALTH - damage
+	if(HEALTH==0):
+		print("Necromancer dead")
+	print("Necromancer Health down")

@@ -1,7 +1,7 @@
 extends Node2D
 
 const SPEED = 60
-var HEALTH = 5
+var HEALTH = 50
 @onready var ray_cast_right = $RayCastRight
 @onready var ray_cast_left = $RayCastLeft
 
@@ -15,7 +15,8 @@ func _process(delta):
 		direction = 1
 	position.x += direction * SPEED * delta
 
-func _on_collision_area_entered(_area):
-	if _area.is_in_group("Weapon"):
-		HEALTH = HEALTH - 1
-		print("Devil Health: " + HEALTH)
+func handle_hit(damage):
+	HEALTH = HEALTH - damage
+	if(HEALTH==0):
+		print("Devil dead")
+	print("Devil Health down")

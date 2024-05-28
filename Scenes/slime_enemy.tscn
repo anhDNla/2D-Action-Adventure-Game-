@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0ifdfk65pqee"]
+[gd_scene load_steps=9 format=3 uid="uid://b0ifdfk65pqee"]
 
 [ext_resource type="Texture2D" uid="uid://dnykwh5x4p1jn" path="res://Assets/Dungeon Assets/slime_.png" id="1_hhveg"]
+[ext_resource type="Script" path="res://Scenes/slime_enemy.gd" id="1_k6lsa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5jxkn"]
 atlas = ExtResource("1_hhveg")
@@ -42,6 +43,7 @@ animations = [{
 radius = 8.0
 
 [node name="slime" type="Node2D" groups=["Enemy"]]
+script = ExtResource("1_k6lsa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)

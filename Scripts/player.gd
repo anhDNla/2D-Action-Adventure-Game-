@@ -7,7 +7,7 @@ const JUMP_VELOCITY = -300.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var direction
+#var direction
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var spawn_point = %SpawnPoint
@@ -23,7 +23,7 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	direction = Input.get_axis("move_left", "move_right")
+	var direction = Input.get_axis("move_left", "move_right")
 	
 	#Flip the Sprite
 	if direction > 0:
@@ -75,4 +75,20 @@ func _on_collision_body_entered(_body):
 		
 func _on_collision_area_entered(_area):
 	if _area.is_in_group("Enemy"):
-		death_tween()
+		#print("Collision")
+		#var direction = _area.global_position.direction_to(self.global_position)
+		#var collision = move_and_collide(direction*SPEED*0.05)
+		#if(collision):
+			##var bounce = collision.get_collider().rotation
+			#direction = direction.bounce(collision.get_normal())
+		#if is_on_floor():
+			##velocity.y = JUMP_VELOCITY * .05
+			##velocity.x = move_toward(velocity.x, 0, SPEED*75)
+			#velocity.x = Input.get_axis("move_left", "move_right") * (SPEED*50)
+			#velocity = velocity.bounce(direction)* 3
+		#else:
+			#velocity = velocity.bounce(direction)* 1
+		var kb_direction = (-velocity).normalized() * 750
+		velocity = kb_direction
+		velocity.y += 450
+		move_and_slide() 

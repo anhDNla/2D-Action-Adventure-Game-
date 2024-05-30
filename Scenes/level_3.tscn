@@ -921,12 +921,12 @@ speed_scale = 1.5
 [node name="platform_5" parent="Platform" instance=ExtResource("5_alg6t")]
 position = Vector2(-79.8174, -120.88)
 curve = SubResource("Curve2D_8tn1u")
-speed = 0.3
+speed = 0.8
 
 [node name="platform_6" parent="Platform" instance=ExtResource("5_alg6t")]
 position = Vector2(520, -121)
 curve = SubResource("Curve2D_ki6ph")
-speed = 0.3
+speed = 0.8
 
 [node name="Doors" type="Node" parent="."]
 

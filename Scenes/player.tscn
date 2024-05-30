@@ -204,6 +204,7 @@ height = 16.0
 size = Vector2(15, 20)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+z_index = 5
 script = ExtResource("1_i4gck")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

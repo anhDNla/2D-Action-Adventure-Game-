@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxoj13t8350bv"]
+
+[ext_resource type="Texture2D" uid="uid://bhyu04uxw0uia" path="res://Assets/Pixel Adventure/Free/Traps/Platforms/Grey Off.png" id="1_f6cbc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41ngt"]
+size = Vector2(30, 6)
+
+[node name="platform_2" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f6cbc")
+region_enabled = true
+region_rect = Rect2(1, 2, 30, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_41ngt")
+one_way_collision = true

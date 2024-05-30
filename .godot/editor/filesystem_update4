@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 res://Scenes/player.tscn
 res://Scenes/main.tscn
 res://Scenes/knight_enemy.tscn
@@ -8,3 +9,23 @@ res://Scripts/knight_enemy.gd
 res://Scenes/hobgoblin_enemy.tscn
 res://Scripts/hobgoblin_enemy.gd
 res://Scripts/necromancer_hand_enemy.gd
+=======
+res://Scenes/level_2.tscn
+res://Scenes/level_1.tscn
+res://Scenes/level_3.tscn
+res://Scenes/next_level.tscn
+res://Scripts/player.gd
+res://Scenes/player.tscn
+res://Scenes/new_level_door.tscn
+res://Scenes/platform.tscn
+res://Scenes/platform_1.tscn
+res://Scenes/platform_2.tscn
+res://Scenes/goblin_king_enemy.tscn
+res://Scenes/platform_3.tscn
+res://Scripts/platform_3.gd
+res://Scenes/ghost_enemy.tscn
+res://Scenes/dragon_enemy.tscn
+res://Scenes/knight_enemy.tscn
+res://Scenes/hobgoblin_enemy.tscn
+res://Scenes/devil_enemy.tscn
+>>>>>>> Stashed changes

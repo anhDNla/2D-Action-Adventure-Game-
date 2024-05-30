@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ubkh822o5t41"]
+[gd_scene load_steps=9 format=3 uid="uid://ubkh822o5t41"]
 
 [ext_resource type="Script" path="res://Scripts/skeleton_enemy.gd" id="1_arqqp"]
 [ext_resource type="Texture2D" uid="uid://da1xus0gjgv5w" path="res://Assets/Dungeon Assets/skeleton_.png" id="1_wrnix"]
@@ -39,10 +39,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="skeleton_enemy" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37gip"]
+size = Vector2(12, 17)
+
+[node name="skeleton_enemy" type="Node2D" groups=["Enemy"]]
 script = ExtResource("1_arqqp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_fp1ao")
 autoplay = "default"
@@ -56,3 +60,9 @@ target_position = Vector2(12, 0)
 [node name="RayCastLeft" type="RayCast2D" parent="AnimatedSprite2D"]
 position = Vector2(0, 5)
 target_position = Vector2(-10, 0)
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_37gip")

@@ -20,6 +20,7 @@
 extends Node2D
 
 const SPEED = 60
+var HEALTH = 60
 
 # RayCast nodes for all four directions
 @onready var ray_cast_up = $RayCastUp
@@ -68,3 +69,9 @@ func _process(delta):
 			else:
 				position.x -= SPEED * delta  # Move left
 				
+
+func handle_hit(damage):
+	HEALTH = HEALTH - damage
+	if(HEALTH==0):
+		print("Knight dead")
+	print("Knight Health down")

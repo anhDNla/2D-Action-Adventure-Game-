@@ -1,7 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://vs21iad1vuyu"]
+[gd_scene load_steps=34 format=3 uid="uid://vs21iad1vuyu"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_i4gck"]
 [ext_resource type="Texture2D" uid="uid://blq3t8bqis7ly" path="res://Assets/Camelot/knight.png" id="1_vr5ny"]
+[ext_resource type="Texture2D" uid="uid://c1veqbcsr31ps" path="res://Assets/Dungeon Assets/weapons_.png" id="3_dhs1c"]
+[ext_resource type="Script" path="res://Scenes/Weapon.gd" id="3_onaxi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xq3pa"]
 atlas = ExtResource("1_vr5ny")
@@ -22,22 +24,6 @@ region = Rect2(96, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1o47"]
 atlas = ExtResource("1_vr5ny")
 region = Rect2(64, 160, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_taw5p"]
-atlas = ExtResource("1_vr5ny")
-region = Rect2(96, 160, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4cph2"]
-atlas = ExtResource("1_vr5ny")
-region = Rect2(128, 160, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nn1e4"]
-atlas = ExtResource("1_vr5ny")
-region = Rect2(160, 160, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l68nu"]
-atlas = ExtResource("1_vr5ny")
-region = Rect2(192, 160, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_674kr"]
 atlas = ExtResource("1_vr5ny")
@@ -125,18 +111,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_u1o47")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_taw5p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4cph2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nn1e4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l68nu")
 }],
 "loop": true,
 "name": &"jump",
@@ -203,6 +177,121 @@ height = 16.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b0djy"]
 size = Vector2(15, 20)
 
+[sub_resource type="Animation" id="Animation_ieb7t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RightSword:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7, -14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RightSword:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.397935]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightSword:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_q3ahr"]
+resource_name = "SwingAnimation"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RightSword:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(7, -14), Vector2(12, -9), Vector2(12, -3), Vector2(6, -14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RightSword:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.397935, 1.25315, 2.13454, 0.260054]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightSword:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0bo6h"]
+_data = {
+"RESET": SubResource("Animation_ieb7t"),
+"SwingAnimation": SubResource("Animation_q3ahr")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugv1e"]
+size = Vector2(14, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qsswu"]
+size = Vector2(14, 20)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 5
 script = ExtResource("1_i4gck")
@@ -213,7 +302,6 @@ position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_4bi4v")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.616711
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -9)
@@ -225,4 +313,42 @@ shape = SubResource("CapsuleShape2D_w378c")
 position = Vector2(-0.5, -9)
 shape = SubResource("RectangleShape2D_b0djy")
 
+[node name="Weapon" type="Area2D" parent="."]
+script = ExtResource("3_onaxi")
+
+[node name="RightSword" type="Sprite2D" parent="Weapon"]
+texture_filter = 1
+position = Vector2(7, -14)
+rotation = 0.397935
+scale = Vector2(0.983333, 0.991556)
+texture = ExtResource("3_dhs1c")
+region_enabled = true
+region_rect = Rect2(26.483, 2.7567, 6.75652, 19.0534)
+
+[node name="Swing" type="AnimationPlayer" parent="Weapon"]
+libraries = {
+"": SubResource("AnimationLibrary_0bo6h")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon"]
+position = Vector2(14, -9)
+shape = SubResource("RectangleShape2D_ugv1e")
+disabled = true
+
+[node name="LeftSword" type="Sprite2D" parent="Weapon"]
+visible = false
+texture_filter = 1
+position = Vector2(-8.09642, -14.2294)
+rotation = 5.88525
+scale = Vector2(1.0763, 1.00245)
+texture = ExtResource("3_dhs1c")
+region_enabled = true
+region_rect = Rect2(26.483, 2.7567, 6.75652, 19.0534)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Weapon"]
+position = Vector2(-15, -9)
+shape = SubResource("RectangleShape2D_qsswu")
+disabled = true
+
+[connection signal="area_entered" from="Collision" to="." method="_on_collision_area_entered"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

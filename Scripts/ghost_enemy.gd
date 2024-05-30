@@ -1,6 +1,7 @@
 extends Node2D
 
 const SPEED = 60
+var HEALTH = 50
 @onready var ray_cast_right = $RayCastRight
 @onready var ray_cast_left = $RayCastLeft
 @onready var animated_sprite = $AnimatedSprite2D
@@ -15,3 +16,9 @@ func _process(delta):
 		direction = 1
 		animated_sprite.flip_h = false;
 	position.x += direction * SPEED * delta
+
+func handle_hit(damage):
+	HEALTH = HEALTH - damage
+	if(HEALTH==0):
+		print("Dragon dead")
+	print("Dragon Health down")

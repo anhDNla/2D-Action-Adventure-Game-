@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://strsnvkr2hh5"]
+[gd_scene load_steps=9 format=3 uid="uid://strsnvkr2hh5"]
 
 [ext_resource type="Script" path="res://Scripts/knight_enemy.gd" id="1_6384w"]
 [ext_resource type="Texture2D" uid="uid://nj0pkng3ritp" path="res://Assets/Dungeon Assets/knight_.png" id="1_wx5o8"]
@@ -39,7 +39,10 @@ animations = [{
 "speed": 13.0
 }]
 
-[node name="knight_enemy" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4esx5"]
+size = Vector2(11, 16)
+
+[node name="knight_enemy" type="Node2D" groups=["Enemy"]]
 script = ExtResource("1_6384w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -63,3 +66,9 @@ target_position = Vector2(0, -9)
 [node name="RayCastDown" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
 target_position = Vector2(0, 7)
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
+position = Vector2(0.5, -8)
+shape = SubResource("RectangleShape2D_4esx5")

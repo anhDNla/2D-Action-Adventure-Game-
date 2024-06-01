@@ -1130,7 +1130,6 @@ position = Vector2(233, -79)
 position = Vector2(79, -157)
 
 [node name="knight_enemy" parent="Enemies" instance=ExtResource("8_3p5b5")]
-texture_filter = 1
 position = Vector2(-170, -207)
 
 [node name="Doors" type="Node" parent="."]

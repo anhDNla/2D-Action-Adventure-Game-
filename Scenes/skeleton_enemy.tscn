@@ -1,7 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ubkh822o5t41"]
+[gd_scene load_steps=10 format=3 uid="uid://ubkh822o5t41"]
 
 [ext_resource type="Script" path="res://Scripts/skeleton_enemy.gd" id="1_arqqp"]
 [ext_resource type="Texture2D" uid="uid://da1xus0gjgv5w" path="res://Assets/Dungeon Assets/skeleton_.png" id="1_wrnix"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35mlj"]
+atlas = ExtResource("1_wrnix")
+region = Rect2(144, 126, 24, 21)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ypa7m"]
 atlas = ExtResource("1_wrnix")
@@ -21,6 +25,14 @@ region = Rect2(72, 24, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fp1ao"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35mlj")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ypa7m")
@@ -49,8 +61,9 @@ script = ExtResource("1_arqqp")
 texture_filter = 1
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_fp1ao")
+animation = &"Death"
 autoplay = "default"
-frame_progress = 0.353265
+frame_progress = 0.547298
 flip_h = true
 
 [node name="RayCastRight" type="RayCast2D" parent="AnimatedSprite2D"]

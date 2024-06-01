@@ -1,7 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5ub3d5344dpu"]
+[gd_scene load_steps=12 format=3 uid="uid://b5ub3d5344dpu"]
 
 [ext_resource type="Texture2D" uid="uid://c6ambtoge7qgy" path="res://Assets/Dungeon Assets/necromancer_.png" id="1_3cdde"]
 [ext_resource type="Script" path="res://Scripts/necromancer_hand_enemy.gd" id="1_n4nde"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spwi7"]
+atlas = ExtResource("1_3cdde")
+region = Rect2(144, 80, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ldj8"]
+atlas = ExtResource("1_3cdde")
+region = Rect2(48, 80, 24, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nf5ys"]
 atlas = ExtResource("1_3cdde")
@@ -25,6 +33,17 @@ region = Rect2(168, 48, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q85qc"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spwi7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ldj8")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nf5ys")
@@ -57,7 +76,6 @@ texture_filter = 1
 position = Vector2(0, -14)
 scale = Vector2(1, 1.08333)
 sprite_frames = SubResource("SpriteFrames_q85qc")
-frame_progress = 0.609059
 
 [node name="RayCastUp" type="RayCast2D" parent="."]
 position = Vector2(0, -9)

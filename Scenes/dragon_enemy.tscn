@@ -1,7 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://tovrxmkqm3dp"]
+[gd_scene load_steps=11 format=3 uid="uid://tovrxmkqm3dp"]
 
 [ext_resource type="Texture2D" uid="uid://dyf8tuq7md67j" path="res://Assets/Dungeon Assets/dragon_.png" id="1_t2exu"]
 [ext_resource type="Script" path="res://Scenes/dragon_enemy.gd" id="1_x6mej"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4q02"]
+atlas = ExtResource("1_t2exu")
+region = Rect2(48, 126, 24, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt43r"]
+atlas = ExtResource("1_t2exu")
+region = Rect2(144, 126, 24, 21)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1whxe"]
 atlas = ExtResource("1_t2exu")
@@ -21,6 +29,17 @@ region = Rect2(72, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1mxia"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4q02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bt43r")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1whxe")
@@ -46,10 +65,11 @@ size = Vector2(14, 18)
 script = ExtResource("1_x6mej")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_1mxia")
+animation = &"Death"
 autoplay = "default"
-frame_progress = 0.329235
 
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
 

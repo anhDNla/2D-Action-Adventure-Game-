@@ -1,7 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0ifdfk65pqee"]
+[gd_scene load_steps=12 format=3 uid="uid://b0ifdfk65pqee"]
 
 [ext_resource type="Texture2D" uid="uid://dnykwh5x4p1jn" path="res://Assets/Dungeon Assets/slime_.png" id="1_hhveg"]
 [ext_resource type="Script" path="res://Scenes/slime_enemy.gd" id="1_k6lsa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ajr5"]
+atlas = ExtResource("1_hhveg")
+region = Rect2(48, 80, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t411w"]
+atlas = ExtResource("1_hhveg")
+region = Rect2(48, 80, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6eg5"]
+atlas = ExtResource("1_hhveg")
+region = Rect2(144, 80, 24, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5jxkn"]
 atlas = ExtResource("1_hhveg")
@@ -21,6 +33,20 @@ region = Rect2(72, 24, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mk7m4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ajr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t411w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6eg5")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5jxkn")
@@ -46,10 +72,13 @@ radius = 8.0
 script = ExtResource("1_k6lsa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_mk7m4")
+animation = &"Death"
 autoplay = "default"
-frame_progress = 0.570678
+frame = 1
+frame_progress = 0.206283
 
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
 

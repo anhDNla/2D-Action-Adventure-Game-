@@ -1,4 +1,7 @@
 res://Scenes/main.tscn
-res://Scenes/level_3.tscn
-res://Scenes/level_2.tscn
+res://Scenes/ghost_enemy.tscn
+res://Scenes/dragon_enemy.tscn
+res://Scenes/devil_enemy.tscn
+res://Scenes/player.tscn
+res://Scenes/necromancer_hand_enemy.tscn
 res://Scenes/level_1.tscn

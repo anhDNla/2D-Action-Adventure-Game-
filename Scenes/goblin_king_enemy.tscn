@@ -1,6 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://dijoeqtsvo0ot"]
+[gd_scene load_steps=10 format=3 uid="uid://dijoeqtsvo0ot"]
 
 [ext_resource type="Texture2D" uid="uid://kf4dteuulimu" path="res://Assets/Dungeon Assets/goblinKing_.png" id="1_6o7jb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fq8u7"]
+atlas = ExtResource("1_6o7jb")
+region = Rect2(48, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dr2fb"]
+atlas = ExtResource("1_6o7jb")
+region = Rect2(144, 96, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_elu8u"]
 atlas = ExtResource("1_6o7jb")
@@ -20,6 +28,17 @@ region = Rect2(168, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ievlr"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fq8u7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dr2fb")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_elu8u")
@@ -42,13 +61,16 @@ animations = [{
 size = Vector2(31, 33)
 
 [node name="goblinKing_enemy" type="Node2D"]
+texture_filter = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -21)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_ievlr")
+animation = &"Death"
 autoplay = "default"
-frame_progress = 0.325044
+frame = 1
+frame_progress = 0.864072
 
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
 

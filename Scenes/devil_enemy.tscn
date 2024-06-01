@@ -1,7 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://t7k0aoiwypd5"]
+[gd_scene load_steps=15 format=3 uid="uid://t7k0aoiwypd5"]
 
 [ext_resource type="Script" path="res://Scripts/devil_enemy.gd" id="1_fdvvi"]
 [ext_resource type="Texture2D" uid="uid://ddb7nxck1rqff" path="res://Assets/Dungeon Assets/devil_.png" id="1_pqm2s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aw560"]
+atlas = ExtResource("1_pqm2s")
+region = Rect2(56, 112, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js055"]
+atlas = ExtResource("1_pqm2s")
+region = Rect2(84, 140, 28, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ow5f"]
 atlas = ExtResource("1_pqm2s")
@@ -39,6 +47,17 @@ region = Rect2(196, 56, 28, 28)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_aw560")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js055")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_6ow5f")
 }, {
 "duration": 1.0,
@@ -74,11 +93,14 @@ size = Vector2(13, 17)
 script = ExtResource("1_fdvvi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-1, -11)
 scale = Vector2(0.955357, 0.852679)
 sprite_frames = SubResource("SpriteFrames_4ayx6")
+animation = &"Death"
 autoplay = "default"
-frame_progress = 0.69875
+frame = 1
+frame_progress = 0.118957
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, -7)

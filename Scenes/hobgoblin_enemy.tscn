@@ -1,7 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://huq5kjnuiys"]
+[gd_scene load_steps=13 format=3 uid="uid://huq5kjnuiys"]
 
 [ext_resource type="Script" path="res://Scripts/hobgoblin_enemy.gd" id="1_8yg8j"]
 [ext_resource type="Texture2D" uid="uid://dgjc2ctdxdp48" path="res://Assets/Dungeon Assets/hobgoblin_.png" id="1_uelyv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t41y"]
+atlas = ExtResource("1_uelyv")
+region = Rect2(48, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sm4te"]
+atlas = ExtResource("1_uelyv")
+region = Rect2(144, 96, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ic8st"]
 atlas = ExtResource("1_uelyv")
@@ -29,6 +37,17 @@ region = Rect2(120, 120, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l6311"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t41y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sm4te")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ic8st")
@@ -60,10 +79,13 @@ size = Vector2(12, 15)
 script = ExtResource("1_8yg8j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_l6311")
+animation = &"Death"
 autoplay = "default"
-frame_progress = 0.368724
+frame = 1
+frame_progress = 0.700868
 
 [node name="RayCastUp" type="RayCast2D" parent="."]
 position = Vector2(0, -9)

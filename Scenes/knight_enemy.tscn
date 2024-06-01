@@ -1,7 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://strsnvkr2hh5"]
+[gd_scene load_steps=11 format=3 uid="uid://strsnvkr2hh5"]
 
 [ext_resource type="Script" path="res://Scripts/knight_enemy.gd" id="1_6384w"]
 [ext_resource type="Texture2D" uid="uid://nj0pkng3ritp" path="res://Assets/Dungeon Assets/knight_.png" id="1_wx5o8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jl053"]
+atlas = ExtResource("1_wx5o8")
+region = Rect2(48, 100, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ik7jj"]
+atlas = ExtResource("1_wx5o8")
+region = Rect2(144, 100, 24, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hu554"]
 atlas = ExtResource("1_wx5o8")
@@ -21,6 +29,17 @@ region = Rect2(72, 48, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6oyc1"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl053")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik7jj")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hu554")
@@ -43,13 +62,15 @@ animations = [{
 size = Vector2(11, 16)
 
 [node name="knight_enemy" type="Node2D" groups=["Enemy"]]
+texture_filter = 1
 script = ExtResource("1_6384w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_6oyc1")
+animation = &"Death"
 autoplay = "default"
-frame_progress = 0.112709
+frame_progress = 0.658249
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, -7)

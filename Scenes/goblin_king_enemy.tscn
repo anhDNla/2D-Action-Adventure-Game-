@@ -58,7 +58,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvdox"]
-size = Vector2(31, 33)
+size = Vector2(20, 33)
 
 [node name="goblinKing_enemy" type="Node2D"]
 texture_filter = 1
@@ -67,13 +67,10 @@ texture_filter = 1
 position = Vector2(0, -21)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_ievlr")
-animation = &"Death"
 autoplay = "default"
-frame = 1
-frame_progress = 0.864072
 
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
-position = Vector2(1.5, -16.5)
+position = Vector2(1, -16.5)
 shape = SubResource("RectangleShape2D_wvdox")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://t7k0aoiwypd5"]
+[gd_scene load_steps=11 format=3 uid="uid://t7k0aoiwypd5"]
 
 [ext_resource type="Script" path="res://Scripts/devil_enemy.gd" id="1_fdvvi"]
 [ext_resource type="Texture2D" uid="uid://ddb7nxck1rqff" path="res://Assets/Dungeon Assets/devil_.png" id="1_pqm2s"]
@@ -27,22 +27,6 @@ region = Rect2(56, 56, 28, 28)
 atlas = ExtResource("1_pqm2s")
 region = Rect2(84, 56, 28, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m6x2n"]
-atlas = ExtResource("1_pqm2s")
-region = Rect2(112, 56, 28, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ud13o"]
-atlas = ExtResource("1_pqm2s")
-region = Rect2(140, 56, 28, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bcph5"]
-atlas = ExtResource("1_pqm2s")
-region = Rect2(168, 56, 28, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eqvw2"]
-atlas = ExtResource("1_pqm2s")
-region = Rect2(196, 56, 28, 28)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ayx6"]
 animations = [{
 "frames": [{
@@ -68,18 +52,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1bmv7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m6x2n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ud13o")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bcph5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eqvw2")
 }],
 "loop": true,
 "name": &"default",
@@ -87,20 +59,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nptby"]
-size = Vector2(13, 17)
+size = Vector2(35, 56)
 
 [node name="Enemy1-Move" type="Node2D" groups=["Enemy"]]
 script = ExtResource("1_fdvvi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-1, -11)
-scale = Vector2(0.955357, 0.852679)
+position = Vector2(-1.43051e-06, -40.0312)
+scale = Vector2(2.5, 2.92634)
 sprite_frames = SubResource("SpriteFrames_4ayx6")
-animation = &"Death"
 autoplay = "default"
-frame = 1
-frame_progress = 0.118957
+flip_h = true
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
@@ -113,5 +83,5 @@ target_position = Vector2(-9, 0)
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
-position = Vector2(-0.5, -7.5)
+position = Vector2(-2.5, -27)
 shape = SubResource("RectangleShape2D_nptby")

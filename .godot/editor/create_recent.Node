@@ -1,8 +1,9 @@
-<<<<<<< Updated upstream
-RayCast2D
-AnimatedSprite2D
+Label
+Node
 CollisionShape2D
+AnimatedSprite2D
 Area2D
+RayCast2D
 Marker2D
 TileMap
 Node2D
@@ -11,19 +12,3 @@ Camera2D
 CharacterBody2D
 Sprite2D
 TextureRect
-=======
-Label
->>>>>>> Stashed changes
-Node
-TileMap
-CollisionShape2D
-Area2D
-Sprite2D
-AnimationPlayer
-AnimatedSprite2D
-RemoteTransform2D
-AnimatableBody2D
-PathFollow2D
-Path2D
-Marker2D
-RichTextLabel

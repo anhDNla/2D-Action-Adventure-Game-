@@ -59,18 +59,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4esx5"]
-size = Vector2(11, 16)
+size = Vector2(23, 29)
 
 [node name="knight_enemy" type="Node2D" groups=["Enemy"]]
 texture_filter = 1
 script = ExtResource("1_6384w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -11)
+position = Vector2(-0.5, -20)
+scale = Vector2(2.04167, 1.75)
 sprite_frames = SubResource("SpriteFrames_6oyc1")
-animation = &"Death"
 autoplay = "default"
-frame_progress = 0.658249
+flip_h = true
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
@@ -80,16 +80,8 @@ target_position = Vector2(6, 0)
 position = Vector2(0, -7)
 target_position = Vector2(-5, 0)
 
-[node name="RayCastUp" type="RayCast2D" parent="."]
-position = Vector2(0, -7)
-target_position = Vector2(0, -9)
-
-[node name="RayCastDown" type="RayCast2D" parent="."]
-position = Vector2(0, -7)
-target_position = Vector2(0, 7)
-
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
-position = Vector2(0.5, -8)
+position = Vector2(-1.5, -14.5)
 shape = SubResource("RectangleShape2D_4esx5")

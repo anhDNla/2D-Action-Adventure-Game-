@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717441596
+::res://::1717694635
 icon.svg::CompressedTexture2D::396869834221710768::1716927523::1717282137::1::::<><>::
-::res://Assets/::1716927523
+::res://Assets/::1717695628
 ::res://Assets/Camelot/::1716927523
 - READ ME -.txt::TextFile::-1::1716927523::0::1::::<><>::
 arthurPendragon_.png::CompressedTexture2D::6578778078878080143::1716927523::1716927523::1::::<><>::
@@ -51,6 +51,9 @@ slime_.png::CompressedTexture2D::8121908956956703055::1716927523::1716927523::1:
 warlockHand_.png::CompressedTexture2D::4037584757561032390::1716927523::1716927523::1::::<><>::
 warlock_.png::CompressedTexture2D::316777724902471204::1716927523::1716927523::1::::<><>::
 weapons_.png::CompressedTexture2D::6641374731938489000::1716927523::1716927523::1::::<><>::
+::res://Assets/fonts/::1717695628
+PixelOperator8-Bold.ttf::FontFile::6936941770277928638::1717695578::1717695651::1::::<><>::
+PixelOperator8.ttf::FontFile::7248744870507454393::1717695578::1717695651::1::::<><>::
 ::res://Assets/Kings and Pigs/::1716927523
 ::res://Assets/Kings and Pigs/Aseprite/::1716927523
 ::res://Assets/Kings and Pigs/Sprites/::1716927523
@@ -157,6 +160,8 @@ WTF Out (24x8).png::CompressedTexture2D::8591401126455660600::1716927523::171692
 ::res://Assets/Kings and Pigs/Sprites/14-TileSets/::1716927523
 Decorations (32x32).png::CompressedTexture2D::3113929015209614524::1716927523::1716927523::1::::<><>::
 Terrain (32x32).png::CompressedTexture2D::8419296041363842835::1716927523::1716927523::1::::<><>::
+::res://Assets/music/::1717695628
+time_for_adventure.mp3::AudioStreamMP3::910032320464020072::1717695578::1717695652::1::::<><>::
 ::res://Assets/Pixel Adventure/::1716927523
 ::res://Assets/Pixel Adventure/Free/::1716927523
 20 Enemies.png::CompressedTexture2D::747737064917459726::1716927523::1716927523::1::::<><>::
@@ -370,41 +375,54 @@ Idle.png::CompressedTexture2D::4353863381689845188::1716927523::1716927523::1:::
 ::res://Assets/Pixel Adventure/Free/Traps/Trampoline/::1716927523
 Idle.png::CompressedTexture2D::3450496921364304011::1716927523::1716927523::1::::<><>::
 Jump (28x28).png::CompressedTexture2D::3973023219560694772::1716927523::1716927523::1::::<><>::
-::res://Scenes/::1717441510
-blue_diamond.tscn::PackedScene::3604491006039350437::1717441510::0::1::::<><>::uid://byhoba0g3365i::::res://Assets/Kings and Pigs/Sprites/12-Live and Coins/Big Diamond Idle (18x14).png
+::res://Assets/sounds/::1717695628
+coin.wav::AudioStreamWAV::540128631005207270::1717695578::1717695652::1::::<><>::
+explosion.wav::AudioStreamWAV::3923250085558049769::1717695578::1717695652::1::::<><>::
+hurt.wav::AudioStreamWAV::9136989958465260607::1717695578::1717695652::1::::<><>::
+jump.wav::AudioStreamWAV::4555448410108296144::1717695578::1717695652::1::::<><>::
+power_up.wav::AudioStreamWAV::5280086168748845488::1717695578::1717695652::1::::<><>::
+tap.wav::AudioStreamWAV::8577790250360397841::1717695578::1717695652::1::::<><>::
+::res://Scenes/::1717694740
+blue_diamond.tscn::PackedScene::3604491006039350437::1717694740::0::1::::<><>::uid://byhoba0g3365i::::res://Assets/Kings and Pigs/Sprites/12-Live and Coins/Big Diamond Idle (18x14).png<>res://Scripts/blue_diamond.gd
 CharacterBody2D.gd::GDScript::-1::1717100077::0::1::::<>CharacterBody2D<>::
-close_door.tscn::PackedScene::3797836404309947080::1717100051::0::1::::<><>::uid://dbol8g4vlari4::::res://Assets/Kings and Pigs/Sprites/11-Door/Idle.png
-devil_enemy.tscn::PackedScene::1400299954048920544::1717282067::0::1::::<><>::res://Scripts/devil_enemy.gd<>uid://ddb7nxck1rqff::::res://Assets/Dungeon Assets/devil_.png
+close_door.tscn::PackedScene::3797836404309947080::1717694740::0::1::::<><>::uid://dbol8g4vlari4::::res://Assets/Kings and Pigs/Sprites/11-Door/Idle.png
+devil_enemy.tscn::PackedScene::1400299954048920544::1717694740::0::1::::<><>::res://Scripts/devil_enemy.gd<>uid://ddb7nxck1rqff::::res://Assets/Dungeon Assets/devil_.png
 dragon_enemy.gd::GDScript::-1::1717100077::0::1::::<>Node2D<>::
-dragon_enemy.tscn::PackedScene::1363795960074877189::1717440286::0::1::::<><>::uid://dyf8tuq7md67j::::res://Assets/Dungeon Assets/dragon_.png<>res://Scenes/dragon_enemy.gd
+dragon_enemy.tscn::PackedScene::1363795960074877189::1717694738::0::1::::<><>::uid://dyf8tuq7md67j::::res://Assets/Dungeon Assets/dragon_.png<>res://Scenes/dragon_enemy.gd
+game_manager3.gd::GDScript::-1::1717541246::0::1::::<>Node<>::
 ghost_enemy.tscn::PackedScene::3916115870238193318::1717100077::0::1::::<><>::uid://bc8gi6khmthwx::::res://Assets/Dungeon Assets/ghost_.png<>res://Scripts/ghost_enemy.gd
-goblin_king_enemy.tscn::PackedScene::7740210251615816851::1717282067::0::1::::<><>::uid://kf4dteuulimu::::res://Assets/Dungeon Assets/goblinKing_.png
-hobgoblin_enemy.tscn::PackedScene::15695148411861874::1717440286::0::1::::<><>::res://Scripts/hobgoblin_enemy.gd<>uid://dgjc2ctdxdp48::::res://Assets/Dungeon Assets/hobgoblin_.png
-knight_enemy.tscn::PackedScene::1303687411701622800::1717282067::0::1::::<><>::res://Scripts/knight_enemy.gd<>uid://nj0pkng3ritp::::res://Assets/Dungeon Assets/knight_.png
-level_1.tscn::PackedScene::2355824016103362418::1717440286::0::1::::<><>::uid://vs21iad1vuyu::::res://Scenes/player.tscn<>uid://t7k0aoiwypd5::::res://Scenes/devil_enemy.tscn<>uid://b0ifdfk65pqee::::res://Scenes/slime_enemy.tscn<>uid://bv184d2kqu2es::::res://Scenes/ghost_enemy.tscn<>uid://ubkh822o5t41::::res://Scenes/skeleton_enemy.tscn<>uid://b5ub3d5344dpu::::res://Scenes/necromancer_hand_enemy.tscn<>uid://tovrxmkqm3dp::::res://Scenes/dragon_enemy.tscn<>uid://strsnvkr2hh5::::res://Scenes/knight_enemy.tscn<>uid://huq5kjnuiys::::res://Scenes/hobgoblin_enemy.tscn<>uid://bx7dju6w6n10m::::res://Assets/Camelot/world_tileset.png<>uid://d23a7kgep4f4g::::res://Scenes/next_level.tscn
-level_2.tscn::PackedScene::6680534097233526380::1717281799::0::1::::<><>::uid://m4tuabetnfem::::res://Scenes/world_tileset.png<>uid://vs21iad1vuyu::::res://Scenes/player.tscn<>uid://budx2tgcqf1ds::::res://Scenes/close_door.tscn<>uid://d23a7kgep4f4g::::res://Scenes/next_level.tscn<>uid://dijoeqtsvo0ot::::res://Scenes/goblin_king_enemy.tscn<>uid://cv3d1yftvuy2a::::res://Scenes/platform_3.tscn
-level_3.tscn::PackedScene::4733328793156956345::1717282066::0::1::::<><>::uid://m4tuabetnfem::::res://Scenes/world_tileset.png<>uid://vs21iad1vuyu::::res://Scenes/player.tscn<>uid://budx2tgcqf1ds::::res://Scenes/close_door.tscn<>uid://b0ifdfk65pqee::::res://Scenes/slime_enemy.tscn<>uid://cv3d1yftvuy2a::::res://Scenes/platform_3.tscn
-main.tscn::PackedScene::2355824016103362418::1717440286::0::1::::<><>::uid://vs21iad1vuyu::::res://Scenes/player.tscn<>uid://bx7dju6w6n10m::::res://Assets/Camelot/world_tileset.png<>uid://t7k0aoiwypd5::::res://Scenes/devil_enemy.tscn<>uid://b0ifdfk65pqee::::res://Scenes/slime_enemy.tscn<>uid://bv184d2kqu2es::::res://Scenes/ghost_enemy.tscn<>uid://ubkh822o5t41::::res://Scenes/skeleton_enemy.tscn<>uid://b5ub3d5344dpu::::res://Scenes/necromancer_hand_enemy.tscn<>uid://tovrxmkqm3dp::::res://Scenes/dragon_enemy.tscn<>uid://strsnvkr2hh5::::res://Scenes/knight_enemy.tscn<>uid://huq5kjnuiys::::res://Scenes/hobgoblin_enemy.tscn
+goblin_king_enemy.tscn::PackedScene::7740210251615816851::1717694740::0::1::::<><>::uid://kf4dteuulimu::::res://Assets/Dungeon Assets/goblinKing_.png
+hobgoblin_enemy.tscn::PackedScene::15695148411861874::1717694738::0::1::::<><>::res://Scripts/hobgoblin_enemy.gd<>uid://dgjc2ctdxdp48::::res://Assets/Dungeon Assets/hobgoblin_.png
+knight_enemy.tscn::PackedScene::1303687411701622800::1717694740::0::1::::<><>::res://Scripts/knight_enemy.gd<>uid://nj0pkng3ritp::::res://Assets/Dungeon Assets/knight_.png
+level_1.tscn::PackedScene::2355824016103362418::1717694738::0::1::::<><>::uid://vs21iad1vuyu::::res://Scenes/player.tscn<>res://Scripts/game_manager.gd<>uid://t7k0aoiwypd5::::res://Scenes/devil_enemy.tscn<>uid://b0ifdfk65pqee::::res://Scenes/slime_enemy.tscn<>uid://bv184d2kqu2es::::res://Scenes/ghost_enemy.tscn<>uid://ubkh822o5t41::::res://Scenes/skeleton_enemy.tscn<>uid://b5ub3d5344dpu::::res://Scenes/necromancer_hand_enemy.tscn<>uid://tovrxmkqm3dp::::res://Scenes/dragon_enemy.tscn<>uid://strsnvkr2hh5::::res://Scenes/knight_enemy.tscn<>uid://huq5kjnuiys::::res://Scenes/hobgoblin_enemy.tscn<>uid://bx7dju6w6n10m::::res://Assets/Camelot/world_tileset.png<>uid://d23a7kgep4f4g::::res://Scenes/next_level.tscn<>uid://brmbo76ptmkcj::::res://Scenes/blue_diamond.tscn<>uid://budx2tgcqf1ds::::res://Scenes/close_door.tscn<>uid://8q4e4rcleyrp::::res://Scenes/white_diamond.tscn<>uid://cv3d1yftvuy2a::::res://Scenes/platform_3.tscn
+level_2.tscn::PackedScene::6680534097233526380::1717694739::0::1::::<><>::res://Scripts/game_manager2.gd<>uid://m4tuabetnfem::::res://Scenes/world_tileset.png<>uid://vs21iad1vuyu::::res://Scenes/player.tscn<>uid://budx2tgcqf1ds::::res://Scenes/close_door.tscn<>uid://d23a7kgep4f4g::::res://Scenes/next_level.tscn<>uid://b0ifdfk65pqee::::res://Scenes/slime_enemy.tscn<>uid://bv184d2kqu2es::::res://Scenes/ghost_enemy.tscn<>uid://brmbo76ptmkcj::::res://Scenes/blue_diamond.tscn<>uid://ubkh822o5t41::::res://Scenes/skeleton_enemy.tscn<>uid://dijoeqtsvo0ot::::res://Scenes/goblin_king_enemy.tscn<>uid://cv3d1yftvuy2a::::res://Scenes/platform_3.tscn<>uid://8q4e4rcleyrp::::res://Scenes/white_diamond.tscn<>uid://tovrxmkqm3dp::::res://Scenes/dragon_enemy.tscn<>uid://huq5kjnuiys::::res://Scenes/hobgoblin_enemy.tscn
+level_3.tscn::PackedScene::4733328793156956345::1717694740::0::1::::<><>::res://Scenes/game_manager3.gd<>uid://m4tuabetnfem::::res://Scenes/world_tileset.png<>uid://vs21iad1vuyu::::res://Scenes/player.tscn<>uid://budx2tgcqf1ds::::res://Scenes/close_door.tscn<>uid://b0ifdfk65pqee::::res://Scenes/slime_enemy.tscn<>uid://cv3d1yftvuy2a::::res://Scenes/platform_3.tscn<>uid://brmbo76ptmkcj::::res://Scenes/blue_diamond.tscn<>uid://strsnvkr2hh5::::res://Scenes/knight_enemy.tscn<>uid://8q4e4rcleyrp::::res://Scenes/white_diamond.tscn<>uid://t7k0aoiwypd5::::res://Scenes/devil_enemy.tscn<>uid://dijoeqtsvo0ot::::res://Scenes/goblin_king_enemy.tscn<>uid://ubkh822o5t41::::res://Scenes/skeleton_enemy.tscn<>uid://tovrxmkqm3dp::::res://Scenes/dragon_enemy.tscn<>uid://b5ub3d5344dpu::::res://Scenes/necromancer_hand_enemy.tscn
+main.tscn::PackedScene::2355824016103362418::1717442489::0::1::::<><>::uid://vs21iad1vuyu::::res://Scenes/player.tscn<>uid://bx7dju6w6n10m::::res://Assets/Camelot/world_tileset.png<>uid://t7k0aoiwypd5::::res://Scenes/devil_enemy.tscn<>uid://b0ifdfk65pqee::::res://Scenes/slime_enemy.tscn<>uid://bv184d2kqu2es::::res://Scenes/ghost_enemy.tscn<>uid://ubkh822o5t41::::res://Scenes/skeleton_enemy.tscn<>uid://b5ub3d5344dpu::::res://Scenes/necromancer_hand_enemy.tscn<>uid://tovrxmkqm3dp::::res://Scenes/dragon_enemy.tscn<>uid://strsnvkr2hh5::::res://Scenes/knight_enemy.tscn<>uid://huq5kjnuiys::::res://Scenes/hobgoblin_enemy.tscn
 mainmenu.tscn::PackedScene::4165824865140438374::1717100077::0::1::::<><>::res://Scripts/mainmenu.gd
-necromancer_hand_enemy.tscn::PackedScene::4533484472363643990::1717282067::0::1::::<><>::uid://c6ambtoge7qgy::::res://Assets/Dungeon Assets/necromancer_.png<>res://Scripts/necromancer_hand_enemy.gd
+necromancer_hand_enemy.tscn::PackedScene::4533484472363643990::1717568669::0::1::::<><>::uid://c6ambtoge7qgy::::res://Assets/Dungeon Assets/necromancer_.png<>res://Scripts/necromancer_hand_enemy.gd
 next_level.tscn::PackedScene::9112221086530069196::1717282066::0::1::::<><>::uid://8evnp3fw0e2e::::res://Assets/Kings and Pigs/Sprites/11-Door/Opening (46x56).png<>res://Scripts/next_level.gd
 platform_1.tscn::PackedScene::6600733344706602012::1717100051::0::1::::<><>::uid://cwfys3lxgcg0i::::res://Assets/Pixel Adventure/Free/Traps/Platforms/Brown Off.png
 platform_2.tscn::PackedScene::8803101128430392747::1717100051::0::1::::<><>::uid://bhyu04uxw0uia::::res://Assets/Pixel Adventure/Free/Traps/Platforms/Grey Off.png
-platform_3.tscn::PackedScene::6304839511694958982::1717100051::0::1::::<><>::res://Scripts/platform_3.gd<>uid://cwfys3lxgcg0i::::res://Assets/Pixel Adventure/Free/Traps/Platforms/Brown Off.png
+platform_3.tscn::PackedScene::6304839511694958982::1717568669::0::1::::<><>::res://Scripts/platform_3.gd<>uid://cwfys3lxgcg0i::::res://Assets/Pixel Adventure/Free/Traps/Platforms/Brown Off.png
 player.tscn::PackedScene::1512810725776679356::1717100077::0::1::::<><>::res://Scripts/player.gd<>uid://blq3t8bqis7ly::::res://Assets/Camelot/knight.png<>uid://c1veqbcsr31ps::::res://Assets/Dungeon Assets/weapons_.png<>res://Scenes/Weapon.gd
-skeleton_enemy.tscn::PackedScene::1406462697226647600::1717282067::0::1::::<><>::res://Scripts/skeleton_enemy.gd<>uid://da1xus0gjgv5w::::res://Assets/Dungeon Assets/skeleton_.png
+skeleton_enemy.tscn::PackedScene::1406462697226647600::1717694740::0::1::::<><>::res://Scripts/skeleton_enemy.gd<>uid://da1xus0gjgv5w::::res://Assets/Dungeon Assets/skeleton_.png
 slime_enemy.gd::GDScript::-1::1717100077::0::1::::<>Node2D<>::
-slime_enemy.tscn::PackedScene::4157966018535927172::1717282067::0::1::::<><>::uid://dnykwh5x4p1jn::::res://Assets/Dungeon Assets/slime_.png<>res://Scenes/slime_enemy.gd
+slime_enemy.tscn::PackedScene::4157966018535927172::1717568669::0::1::::<><>::uid://dnykwh5x4p1jn::::res://Assets/Dungeon Assets/slime_.png<>res://Scenes/slime_enemy.gd
 Weapon.gd::GDScript::-1::1717100077::0::1::::<>Area2D<>::
+white_diamond.tscn::PackedScene::2351031369630457473::1717530683::0::1::::<><>::res://Scripts/white_diamond.gd<>uid://dh473figcvd4n::::res://Assets/Kings and Pigs/Sprites/12-Live and Coins/Big Diamond Hit (18x14).png
 world_tileset.png::CompressedTexture2D::903322419017236224::1716927523::1716927523::1::::<><>::
-::res://Scripts/::1717100077
-devil_enemy.gd::GDScript::-1::1717100077::0::1::::<>Node2D<>::
+::res://Scripts/::1717694738
+blue_diamond.gd::GDScript::-1::1717694738::0::1::::<>Area2D<>::
+devil_enemy.gd::GDScript::-1::1717569546::0::1::::<>Node2D<>::
+game_manager2.gd::GDScript::-1::1717571829::0::1::::<>Node<>::
+game_manager.gd::GDScript::-1::1717530411::0::1::::<>Node<>::
 ghost_enemy.gd::GDScript::-1::1717100077::0::1::::<>Node2D<>::
-hobgoblin_enemy.gd::GDScript::-1::1717100077::0::1::::<>Node2D<>::
-knight_enemy.gd::GDScript::-1::1717100077::0::1::::<>Node2D<>::
+hobgoblin_enemy.gd::GDScript::-1::1717536193::0::1::::<>Node2D<>::
+knight_enemy.gd::GDScript::-1::1717569005::0::1::::<>Node2D<>::
 mainmenu.gd::GDScript::-1::1717100077::0::1::::<>Control<>::
 necromancer_hand_enemy.gd::GDScript::-1::1717100077::0::1::::<>Node2D<>::
 next_level.gd::GDScript::-1::1717100051::0::1::::<>Area2D<>::
 platform_3.gd::GDScript::-1::1717100051::0::1::::<>Path2D<>::
 player.gd::GDScript::-1::1717100077::0::1::::<>CharacterBody2D<>::
 skeleton_enemy.gd::GDScript::-1::1717100077::0::1::::<>Node2D<>::
+white_diamond.gd::GDScript::-1::1717527608::0::1::::<>Area2D<>::

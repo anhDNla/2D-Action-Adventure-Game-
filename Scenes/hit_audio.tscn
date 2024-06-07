@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://hadcpcioxvl6"]
+
+[ext_resource type="AudioStream" uid="uid://duhe7my8ilfph" path="res://Assets/sounds/tap.wav" id="1_snlhc"]
+
+[node name="hit_audio" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_snlhc")

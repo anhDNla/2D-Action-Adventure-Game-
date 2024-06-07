@@ -6,12 +6,16 @@ const JUMP_VELOCITY = -300.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var death_position = Vector2(-24,0)
 
 #var direction
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var spawn_point = %SpawnPoint
 @onready var weapon = $Weapon
+@onready var jump_audio = $"../Audio/jump_audio"
+@onready var collision_audio = $"../Audio/collision_audio"
+@onready var death_audio = $"../Audio/death_audio"
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -21,6 +25,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump_audio.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_axis("move_left", "move_right")
@@ -47,7 +52,10 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		
+	if position.y > 500:
+		position = death_position
+		
 	move_and_slide()
 	
 
@@ -71,10 +79,16 @@ func respawn_tween():
 
 func _on_collision_body_entered(_body):
 	if _body.is_in_group("OutOfBounds"):
+		death_audio.play()
 		death_tween()
+	if _body.is_in_group("Checkpoint"):
+		spawn_point.global_position
+		print(spawn_point.global_position)
+		print(_body.global_position)
 		
 func _on_collision_area_entered(_area):
 	if _area.is_in_group("Enemy"):
+		collision_audio.play()
 		#print("Collision")
 		#var direction = _area.global_position.direction_to(self.global_position)
 		#var collision = move_and_collide(direction*SPEED*0.05)

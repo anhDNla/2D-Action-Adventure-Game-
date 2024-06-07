@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://u4uw8rk47vav"]
+
+[ext_resource type="AudioStream" uid="uid://d3ga5iqgco704" path="res://Assets/sounds/hurt.wav" id="1_foaoa"]
+
+[node name="collision_audio" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_foaoa")

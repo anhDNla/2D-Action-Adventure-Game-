@@ -1,9 +1,11 @@
 extends Area2D
 
+#@onready var new_level_audio = $new_level_audio
 
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
+		#new_level_audio.play()
 		var current_scene_file = get_tree().current_scene.scene_file_path
 		var next_level_number = current_scene_file.to_int() + 1
 		var next_level_path = "res://Scenes/level_" + str(next_level_number) + ".tscn"

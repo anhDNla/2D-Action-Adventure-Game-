@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxh3bjrrdmeba"]
+
+[ext_resource type="AudioStream" uid="uid://bv5pmdha600lx" path="res://Assets/sounds/explosion.wav" id="1_n6isj"]
+
+[node name="death_audio" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_n6isj")
+volume_db = 5.0

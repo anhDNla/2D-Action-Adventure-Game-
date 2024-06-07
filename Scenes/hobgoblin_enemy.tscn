@@ -73,20 +73,31 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7q1bc"]
-size = Vector2(22, 38)
+size = Vector2(15, 21)
 
 [node name="hobgoblin_enemy" type="Node2D" groups=["Enemy"]]
 script = ExtResource("1_8yg8j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-1, -25.5)
-scale = Vector2(2, 2.125)
+position = Vector2(1.43051e-06, -15)
+scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_l6311")
 autoplay = "default"
+frame_progress = 0.22153
+flip_h = true
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, -11)
+target_position = Vector2(8, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, -11)
+target_position = Vector2(-9, 0)
 
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+position = Vector2(0, -9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
-position = Vector2(0, -17)
+position = Vector2(-0.5, -2)
 shape = SubResource("RectangleShape2D_7q1bc")

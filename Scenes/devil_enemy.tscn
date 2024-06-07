@@ -69,6 +69,7 @@ texture_filter = 1
 position = Vector2(-1.43051e-06, -40.0312)
 scale = Vector2(2.5, 2.92634)
 sprite_frames = SubResource("SpriteFrames_4ayx6")
+animation = &"Death"
 autoplay = "default"
 flip_h = true
 

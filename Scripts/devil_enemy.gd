@@ -14,9 +14,15 @@ var HEALTH = 50
 	#if ray_cast_left.is_colliding():
 		#direction = 1
 	#position.x += direction * SPEED * delta
-
+	
 func handle_hit(damage):
 	HEALTH = HEALTH - damage
-	if(HEALTH==0):
-		print("Devil dead")
-	print("Devil Health down")
+	if(HEALTH<=0):
+		$AnimatedSprite2D.play("Death")
+		await get_tree().create_timer(0.7).timeout
+		if $AnimatedSprite2D.animation_finished:
+			on_finished()
+			
+func on_finished():
+	set_physics_process(false)
+	queue_free()

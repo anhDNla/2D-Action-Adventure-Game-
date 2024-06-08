@@ -65,3 +65,5 @@ target_position = Vector2(-11, -1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_3i3ge")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="handle_hit"]

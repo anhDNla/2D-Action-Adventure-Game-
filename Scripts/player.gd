@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
+var jump_count : int = 1
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -26,6 +27,11 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		jump_audio.play()
+		
+	if Input.is_action_just_pressed("jump") and !is_on_floor() and jump_count>0:
+		jump_count -= 1
+		velocity.y = JUMP_VELOCITY * .7
+		jump_audio.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_axis("move_left", "move_right")
@@ -40,6 +46,7 @@ func _physics_process(delta):
 	
 	#Play animations
 	if is_on_floor():
+		jump_count = 1
 		if direction == 0:
 			animated_sprite.play("idle")
 		else:

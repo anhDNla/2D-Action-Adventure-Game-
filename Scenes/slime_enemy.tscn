@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://b0ifdfk65pqee"]
+[gd_scene load_steps=13 format=3 uid="uid://b0ifdfk65pqee"]
 
 [ext_resource type="Texture2D" uid="uid://dnykwh5x4p1jn" path="res://Assets/Dungeon Assets/slime_.png" id="1_hhveg"]
 [ext_resource type="Script" path="res://Scenes/slime_enemy.gd" id="1_k6lsa"]
+[ext_resource type="Script" path="res://Scenes/AnimatedSprite2D.gd" id="3_cfxmg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ajr5"]
 atlas = ExtResource("1_hhveg")
@@ -43,7 +44,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g6eg5")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
 "speed": 5.0
 }, {
@@ -77,11 +78,12 @@ position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_mk7m4")
 animation = &"Death"
 autoplay = "default"
-frame = 1
-frame_progress = 0.206283
+script = ExtResource("3_cfxmg")
 
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_2akxi")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="handle_hit"]

@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 var jump_count : int = 1
+var HEALTH : int = 100
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -86,8 +87,11 @@ func respawn_tween():
 
 func _on_collision_body_entered(_body):
 	if _body.is_in_group("OutOfBounds"):
+		HEALTH -= 10
 		death_audio.play()
 		death_tween()
+		if(HEALTH<=10):
+			print("Game over?")
 	if _body.is_in_group("Checkpoint"):
 		spawn_point.global_position
 		print(spawn_point.global_position)
@@ -95,7 +99,10 @@ func _on_collision_body_entered(_body):
 		
 func _on_collision_area_entered(_area):
 	if _area.is_in_group("Enemy"):
+		HEALTH -= 10
 		collision_audio.play()
+		if(HEALTH<=10):
+			print("Game over?")
 		#print("Collision")
 		#var direction = _area.global_position.direction_to(self.global_position)
 		#var collision = move_and_collide(direction*SPEED*0.05)

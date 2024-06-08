@@ -61,8 +61,9 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
-	if position.y > 500:
-		position = death_position
+	#if position.y > 50:
+	#	death_audio.play()
+	#	position = death_position
 		
 	move_and_slide()
 	
@@ -75,7 +76,7 @@ func death_tween():
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
 	await tween.finished
-	global_position = spawn_point.global_position
+	global_position = death_position
 	await get_tree().create_timer(0.3).timeout
 	respawn_tween()
 
@@ -92,10 +93,6 @@ func _on_collision_body_entered(_body):
 		death_tween()
 		if(HEALTH<=10):
 			print("Game over?")
-	if _body.is_in_group("Checkpoint"):
-		spawn_point.global_position
-		print(spawn_point.global_position)
-		print(_body.global_position)
 		
 func _on_collision_area_entered(_area):
 	if _area.is_in_group("Enemy"):
@@ -103,20 +100,8 @@ func _on_collision_area_entered(_area):
 		collision_audio.play()
 		if(HEALTH<=10):
 			print("Game over?")
-		#print("Collision")
-		#var direction = _area.global_position.direction_to(self.global_position)
-		#var collision = move_and_collide(direction*SPEED*0.05)
-		#if(collision):
-			##var bounce = collision.get_collider().rotation
-			#direction = direction.bounce(collision.get_normal())
-		#if is_on_floor():
-			##velocity.y = JUMP_VELOCITY * .05
-			##velocity.x = move_toward(velocity.x, 0, SPEED*75)
-			#velocity.x = Input.get_axis("move_left", "move_right") * (SPEED*50)
-			#velocity = velocity.bounce(direction)* 3
-		#else:
-			#velocity = velocity.bounce(direction)* 1
-		var kb_direction = (-velocity).normalized() * 750
+
+		var kb_direction = ((_area.get_parent().position)-velocity).normalized() * 750
 		velocity = kb_direction
 		velocity.y += 450
 		move_and_slide() 

@@ -67,17 +67,17 @@ frame_progress = 0.547298
 flip_h = true
 
 [node name="RayCastRight" type="RayCast2D" parent="AnimatedSprite2D"]
-position = Vector2(0, 5)
-target_position = Vector2(12, 0)
+position = Vector2(-1, 5)
+target_position = Vector2(6, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="AnimatedSprite2D"]
-position = Vector2(0, 5)
-target_position = Vector2(-10, 0)
+position = Vector2(-1, 5)
+target_position = Vector2(-6, 0)
 
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
-position = Vector2(0, -7.5)
+position = Vector2(-1, -9)
 shape = SubResource("RectangleShape2D_37gip")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="handle_hit"]

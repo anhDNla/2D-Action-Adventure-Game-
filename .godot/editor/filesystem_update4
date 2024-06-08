@@ -3,4 +3,4 @@ res://Scripts/blue_diamond.gd
 res://Scenes/level_2.tscn
 res://Scenes/level_3.tscn
 res://Scenes/player.tscn
-res://Scenes/Weapon.gd
+res://Scenes/skeleton_enemy.tscn

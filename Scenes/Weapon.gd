@@ -8,6 +8,8 @@ var direction = 'R'
 
 # Onready variable for animation
 @onready var anim = $Swing
+@onready var animL = $LeftSwing
+
 func toggleRight():
 	$LeftSword.visible = false
 	$RightSword.visible = true
@@ -22,7 +24,9 @@ func toggleLeft():
 func attack():
 	if(direction == 'R'):
 		anim.play("SwingAnimation")
-		
+	if(direction == 'L'):
+		animL.play("LeftSword")
+
 func _on_area_entered(area):
 	if area.get_parent().has_method("handle_hit"):
 		area.get_parent().handle_hit(damage)

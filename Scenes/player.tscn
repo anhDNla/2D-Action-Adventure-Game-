@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://vs21iad1vuyu"]
+[gd_scene load_steps=38 format=3 uid="uid://vs21iad1vuyu"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_i4gck"]
 [ext_resource type="Texture2D" uid="uid://blq3t8bqis7ly" path="res://Assets/Camelot/knight.png" id="1_vr5ny"]
@@ -293,6 +293,91 @@ size = Vector2(14, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qsswu"]
 size = Vector2(14, 20)
 
+[sub_resource type="Animation" id="Animation_17n36"]
+resource_name = "LeftSword"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftSword:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, -14), Vector2(-10, -9), Vector2(-10, -4), Vector2(-8, -13)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftSword:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [5.77879, 4.92706, 4.07534, 5.67232]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D2:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_q4bh3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftSword:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7, -14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftSword:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5.77879]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D2:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r85d7"]
+_data = {
+"LeftSword": SubResource("Animation_17n36"),
+"RESET": SubResource("Animation_q4bh3")
+}
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 5
 script = ExtResource("1_i4gck")
@@ -339,8 +424,8 @@ disabled = true
 [node name="LeftSword" type="Sprite2D" parent="Weapon"]
 visible = false
 texture_filter = 1
-position = Vector2(-8.09642, -14.2294)
-rotation = 5.88525
+position = Vector2(-7, -14)
+rotation = 5.77879
 scale = Vector2(1.0763, 1.00245)
 texture = ExtResource("3_dhs1c")
 region_enabled = true
@@ -352,6 +437,11 @@ shape = SubResource("RectangleShape2D_qsswu")
 disabled = true
 
 [node name="hit_audio" parent="Weapon" instance=ExtResource("5_s75kd")]
+
+[node name="LeftSwing" type="AnimationPlayer" parent="Weapon"]
+libraries = {
+"": SubResource("AnimationLibrary_r85d7")
+}
 
 [connection signal="area_entered" from="Collision" to="." method="_on_collision_area_entered"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

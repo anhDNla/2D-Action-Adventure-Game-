@@ -19,8 +19,8 @@
 
 extends Node2D
 
-const SPEED = 60
-var HEALTH = 60
+const SPEED = 70
+var HEALTH = 90
 var direction = 1
 
 # RayCast nodes for all four directions

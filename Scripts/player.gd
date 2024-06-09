@@ -4,11 +4,11 @@ extends CharacterBody2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 var jump_count : int = 1
-var HEALTH : int = 100
+var HEALTH : int = 200
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var death_position = Vector2(-24,0)
+var death_position = Vector2(0,0)
 
 #var direction
 
@@ -60,10 +60,6 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
-	#if position.y > 50:
-	#	death_audio.play()
-	#	position = death_position
 		
 	move_and_slide()
 	

@@ -59,7 +59,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owqjm"]
-size = Vector2(28, 36)
+size = Vector2(29, 31)
 
 [node name="dragon_enemy" type="Node2D" groups=["Enemy"]]
 script = ExtResource("1_x6mej")
@@ -71,10 +71,19 @@ scale = Vector2(2, 1.70833)
 sprite_frames = SubResource("SpriteFrames_1mxia")
 autoplay = "default"
 
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, -12)
+target_position = Vector2(16, -1)
+
+[node name="RayCast2Left" type="RayCast2D" parent="."]
+position = Vector2(0, -13)
+target_position = Vector2(-16, 0)
+
 [node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+position = Vector2(83, -36)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
-position = Vector2(0, -18)
+position = Vector2(-82.5, 20.5)
 shape = SubResource("RectangleShape2D_owqjm")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="handle_hit"]

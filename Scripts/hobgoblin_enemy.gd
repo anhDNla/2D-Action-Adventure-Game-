@@ -1,7 +1,7 @@
 extends Node2D
 
-var HEALTH = 20
-const SPEED = 60
+var HEALTH = 70
+const SPEED = 50
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var ray_cast_right = $RayCastRight
 @onready var ray_cast_left = $RayCastLeft

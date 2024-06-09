@@ -1,7 +1,7 @@
 extends Node2D
 
 const SPEED = 60
-var HEALTH = 40
+var HEALTH = 50
 
 # Assuming you have RayCast nodes set up for up and down directions
 @onready var ray_cast_up = $RayCastUp

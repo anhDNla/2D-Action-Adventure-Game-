@@ -1,6 +1,6 @@
 extends Node2D
 
-var HEALTH = 20
+var HEALTH = 30
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

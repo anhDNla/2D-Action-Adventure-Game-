@@ -1,10 +1,10 @@
 extends Node2D
 
-const SPEED = 60
+const SPEED = 70
 @onready var ray_cast_right = $AnimatedSprite2D/RayCastRight
 @onready var ray_cast_left = $AnimatedSprite2D/RayCastLeft
 @onready var animated_sprite = $AnimatedSprite2D
-@export var HEALTH: int = 30
+@export var HEALTH: int = 50
 var direction = 1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

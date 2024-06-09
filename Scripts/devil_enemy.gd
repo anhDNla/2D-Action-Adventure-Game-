@@ -1,7 +1,7 @@
 extends Node2D
 
 const SPEED = 60
-var HEALTH = 50
+var HEALTH = 100
 #@onready var ray_cast_right = $RayCastRight
 #@onready var ray_cast_left = $RayCastLeft
 #

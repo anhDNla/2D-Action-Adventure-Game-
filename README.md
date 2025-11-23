@@ -1,6 +1,7 @@
 ## 🎮 2D Action-Adventure Game (Godot Engine)
 
-A 2D action-adventure game developed as part of a collaborative software engineering project. Built using the **Godot Engine**, this project focuses on gameplay mechanics, character controls, combat, enemy AI, and level design.
+A 2D action-adventure game developed as part of a collaborative software engineering project. 
+Built using the **Godot Engine**, this project focuses on gameplay mechanics, character controls, combat, enemy AI, and level design.
 
 
 ## 📌 Project Overview
@@ -17,7 +18,7 @@ The project emphasizes **modular design, maintainability, and user experience**.
 - Scalable subsystem architecture  
 - GitHub collaboration and version control
 
----
+
 
 ## 🧩 Gameplay Systems
 
@@ -45,7 +46,7 @@ The project emphasizes **modular design, maintainability, and user experience**.
 - UI elements: health bar, score, menus  
 - Pause menu & settings menu  
 
----
+
 
 ## 🏗️ System Architecture (High-Level)
 
@@ -57,7 +58,7 @@ This project uses a modular subsystem architecture:
 - **Menu System** – title screen, in-game menus  
 - **Game State Subsystem** – camera, score, level state  
 
----
+
 
 ## 🛠️ Tech Stack
 
@@ -77,7 +78,7 @@ This project uses a modular subsystem architecture:
 - Combat + health system  
 - Scene management  
 
----
+
 
 ## 🏃 How to Run the Game
 
@@ -97,7 +98,7 @@ git clone https://github.com/anhDNla/2D-Action-Adventure-Game-.git
 - Click Run Project
 ### 4. Play!
 
-Use your keyboard to move, jump, and attack.
+- Use your keyboard to move, jump, and attack.
 
 ## 📁 Project Structure
 - /scenes          → Levels, enemies, player, UI
@@ -113,11 +114,11 @@ Use your keyboard to move, jump, and attack.
 - Debug logging using Godot console
   
 ## 👥 Team Contributions
-Developed by a 4-person team with roles including:
-- Gameplay programmer
-- Level designer
-- System architect
-- UI designer
+- Developed by a 4-person team with roles including:
+-- Gameplay programmer
+-- Level designer
+-- System architect
+-- UI designer
 
 ## 🧠 Skills
 - Godot Engine · GDScript · Game Design · Level Design · AI Programming · Collision Systems

@@ -1,4 +1,4 @@
-## 🎮 2D Action-Adventure Game (Godot Engine)
+# 🎮 2D Action-Adventure Game (Godot Engine)
 
 A 2D action-adventure game developed as part of a collaborative software engineering project. 
 Built using the **Godot Engine**, this project focuses on gameplay mechanics, character controls, combat, enemy AI, and level design.
@@ -99,6 +99,8 @@ git clone https://github.com/anhDNla/2D-Action-Adventure-Game-.git
 ### 4. Play!
 
 - Use your keyboard to move, jump, and attack.
+### 5. Gameplay Demo
+- [▶️ Click here to watch the gameplay video](https://drive.google.com/file/d/1twjPZ7Qb33RjUr9itYU4oPKN9a3REDwT/view?usp=sharing)
 
 ## 📁 Project Structure
 - /scenes          → Levels, enemies, player, UI

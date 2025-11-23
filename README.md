@@ -89,3 +89,40 @@ https://godotengine.org/download
 ### 2. Clone the Repository
 ```bash
 git clone https://github.com/anhDNla/2D-Action-Adventure-Game-.git
+```
+
+### 3. Open Project
+- Launch Godot
+- Click Import
+- Select the folder containing project.godot
+- Click Run Project
+### 4. Play!
+
+Use your keyboard to move, jump, and attack.
+
+## 📁 Project Structure
+/scenes          → Levels, enemies, player, UI
+/scripts         → Player, enemy, and combat logic
+/assets          → Sprites, TileSets, animations
+project.godot    → Root Godot project file
+
+## 🧪 Testing
+- Manual gameplay testing
+- Hitbox & collision verification
+- Enemy AI behavior testing
+- Scene transition checks
+- Debug logging using Godot console
+  
+## 👥 Team Contributions
+Developed by a 4-person team with roles including:
+- Gameplay programmer
+- Level designer
+- System architect
+- UI designer
+
+## 🧠 Skills
+Godot Engine · GDScript · Game Design · Level Design · AI Programming · Collision Systems
+Combat Logic · Software Architecture · Git · GitHub · Team Collaboration · Game Testing
+
+## 📜 License
+This project is for educational and demonstration purposes.

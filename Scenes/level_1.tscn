@@ -1157,7 +1157,7 @@ position = Vector2(247, -79)
 [node name="Doors" type="Node" parent="."]
 
 [node name="NextLevel" parent="Doors" instance=ExtResource("11_idvwy")]
-position = Vector2(848, -207)
+position = Vector2(804, -247)
 
 [node name="close_door" parent="Doors" instance=ExtResource("13_2r3af")]
 position = Vector2(0, 1)

@@ -23,3 +23,4 @@ res://Scenes/goblin_king_enemy.tscn
 res://Scenes/ghost_enemy.tscn
 res://Scenes/dragon_enemy.tscn
 res://Scripts/ghost_enemy.gd
+res://Scenes/slime_enemy.tscn

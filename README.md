@@ -1,4 +1,5 @@
 **🎮 2D Action-Adventure Game (Godot Engine)**
+
 A 2D action-adventure game developed as part of a collaborative software engineering project. Built using the Godot Engine, this project focuses on core gameplay mechanics, character controls, combat, enemy AI, and engaging level design.
 This game demonstrates structured software design, clean architecture, and teamwork throughout development.
 
@@ -23,6 +24,7 @@ Scalable, maintainable subsystem design
 Collaboration through GitHub and structured development practices
 
 **🧩 Gameplay Systems**
+
 ✔ Player Controls
 
 Movement (walk, run, jump, double jump)

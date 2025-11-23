@@ -1,172 +1,171 @@
-**🎮 2D Action-Adventure Game (Godot Engine)**
+🎮 2D Action-Adventure Game (Godot Engine)
 
-  A 2D action-adventure game developed as part of a collaborative software engineering project. Built using the Godot Engine, this project focuses on core gameplay mechanics, character controls, combat, enemy AI, and engaging level design.
-  This game demonstrates structured software design, clean architecture, and teamwork throughout development.
+A 2D action-adventure game developed as part of a collaborative software engineering project. Built using the Godot Engine, this project focuses on gameplay mechanics, character controls, combat, enemy AI, and engaging level design.
 
-**📌 Project Overview**
+📌 Project Overview
 
-This game was created to explore the fundamentals of game development, including gameplay systems, player control, combat mechanics, and enemy behavior. The project emphasizes modular design, maintainability, and user experience.
+This game was created to explore the fundamentals of game development, including gameplay systems, player control, combat mechanics, and enemy behavior.
+The project emphasizes modular design, maintainability, and user experience.
 
-  **Key Features**
-  
-  Smooth player movement, jumping, and combat attacks
-  
-  Multiple enemies with basic AI behaviors
-  
-  Level design using TileSets and scenes
-  
-  Inventory, health system, and in-game interactions
-  
-  Main menu and in-game UI elements
-  
-  Scalable, maintainable subsystem design
-  
-  Collaboration through GitHub and structured development practices
+Key Features
 
-**🧩 Gameplay Systems**
+Smooth player movement, jumping, and combat attacks
 
-  ✔ Player Controls
-  
-  Movement (walk, run, jump, double jump)
-  
-  Combat actions and animations
-  
-  Responsive input handling
-  
-  Collision and hitbox detection
-  
-  ✔ Combat Mechanics
-  
-  Player and enemy attack logic
-  
-  Damage application
-  
-  Attack animations
-  
-  Hit detection & knockback
-  
-  ✔ Enemy AI
-  
-  Movement patterns
-  
-  Basic decision-making
-  
-  Health & damage states
-  
-  Interaction with combat system
-  
-  ✔ Level & UI Design
-  
-  Tile-based levels
-  
-  Scene management
-  
-  In-game UI (health, score, menus)
-  
-  Pause menu, settings menu, and navigation
+Multiple enemies with basic AI behaviors
 
-**🏗️ System Architecture (High-Level)**
+Level design using TileSets and scenes
 
-  The project is designed using modular subsystems: 
-  
-  SDD Template (1)
-  
-  Player Control Subsystem – input, movement, traversal, animations
-  
-  Combat Subsystem – attack logic, damage, collision
-  
-  Enemy AI Subsystem – behavior and movement patterns
-  
-  Menu System – title screen, in-game menus, settings
-  
-  Game State Subsystem – camera follow, health, score, level state
-  
-  This structure ensures flexibility, scalability, and maintainability.
+Inventory, health system, and in-game interactions
 
-**🛠️ Tech Stack**
+Main menu and in-game UI elements
 
-  Engine:
-  
-  Godot Engine
-  
-  GDScript
-  
-  Development:
-  
-  Git & GitHub
-  
-  VS Code / Godot Editor
-  
-  Game Systems:
-  
-  Player controller
-  
-  Enemy AI
-  
-  Level design
-  
-  Combat + health
-  
-  Menu/UI
-  
-  Scene management
+Scalable, maintainable subsystem design
 
-**🏃 How to Run the Game**
+Collaboration using Git & GitHub
 
-  1. Install Godot
-  
-  Download Godot (stable version):
-  https://godotengine.org/download
-  
-  2. Clone the Repository
-  git clone https://github.com/anhDNla/2D-Action-Adventure-Game-.git
-  
-  3. Open in Godot
-  
-  Launch Godot
-  
-  Click Import
-  
-  Select the folder containing project.godot
-  
-  Click Run Project
-  
-  4. Play the Game
-  
-  Use your keyboard to move, jump, and attack!
+🧩 Gameplay Systems
+✔ Player Controls
 
-**📁 Project Structure**
+Walking, running, jumping, double jumping
 
-  /scenes               → Levels, enemies, player, UI  
-  /scripts              → Gameplay logic (player, enemy, combat)  
-  /assets               → Sprites, TileSets, animations  
-  project.godot         → Godot root project file  
+Combat actions and animations
 
-**🧪 Testing**
+Responsive input handling
 
-  Manual gameplay testing
-  
-  Hitbox/collision verification
-  
-  AI behavior testing
-  
-  Level transitions and UI flow testing
-  
-  Debug logging through Godot console
+Hitbox and collision detection
 
-**👥 Team Contributions**
+✔ Combat Mechanics
 
-  This project was built collaboratively by a 4-person team.
-  Roles included: gameplay programmer, level designer, system architect, and UI designer.
+Player and enemy attack logic
 
-  The SDD document contains full design details and rationale. 
+Damage calculation
 
-  SDD Template (1)
+Combat animations
 
-**🧠 Skills Demonstrated**
+Knockback and hit detection
 
-  Godot Engine · GDScript · Game Design · Level Design · AI Programming · Collision Systems · Combat Logic · Software Architecture · Git · GitHub · Team Collaboration · Game Testing · Software Engineering Practices
+✔ Enemy AI
 
-**📜 License**
+Movement patterns
 
-  This project is for educational use and demonstration purposes.
+Basic decision-making
+
+Health and damage states
+
+Interaction with combat system
+
+✔ Level & UI Design
+
+Tile-based levels
+
+Scene transitions
+
+In-game UI (health bar, score display, menus)
+
+Pause menu and settings menu
+
+🏗️ System Architecture (High-Level)
+
+This project follows a modular subsystem architecture:
+
+Player Control Subsystem – input, traversal, animations
+
+Combat Subsystem – attacks, collision, damage
+
+Enemy AI Subsystem – behavior, movement, interaction
+
+Menu System – title screen, settings, in-game menu
+
+Game State Subsystem – camera, score, health, level state
+
+This structure ensures flexibility, scalability, and maintainability.
+
+🛠️ Tech Stack
+Engine
+
+Godot Engine
+
+GDScript
+
+Development
+
+Git & GitHub
+
+VS Code / Godot Editor
+
+Game Systems
+
+Player controller
+
+Enemy AI
+
+Level design
+
+Combat + health system
+
+Menu/UI
+
+Scene management
+
+🏃 How to Run the Game
+1. Install Godot
+
+Download the stable version:
+https://godotengine.org/download
+
+2. Clone the Repository
+git clone https://github.com/anhDNla/2D-Action-Adventure-Game-.git
+
+3. Open Project
+
+Launch Godot
+
+Click Import
+
+Select the folder containing project.godot
+
+Click Run Project
+
+4. Play!
+
+Use your keyboard to move, jump, and attack.
+
+📁 Project Structure
+/scenes          → Levels, enemies, player, UI
+/scripts         → Player, enemy, and combat logic
+/assets          → Sprites, TileSets, animations
+project.godot    → Root Godot project file
+
+🧪 Testing
+
+Manual gameplay testing
+
+Hitbox/collision checks
+
+AI behavior tests
+
+Scene transition testing
+
+Debug logs via console
+
+👥 Team Contributions
+
+Developed by a 4-person team with roles including:
+
+Gameplay programmer
+
+Level designer
+
+System architect
+
+UI designer
+
+Full design details are available in the Software Design Document (SDD).
+
+🧠 Skills Demonstrated
+
+Godot Engine · GDScript · Game Design · Level Design · AI Programming · Collision Systems · Combat Logic · Software Architecture · Git · GitHub · Team Collaboration · Game Testing · Software Engineering Practices
+
+📜 License
+
+This project is for educational and demonstration purposes.

@@ -2,7 +2,6 @@
 
 A 2D action-adventure game developed as part of a collaborative software engineering project. Built using the **Godot Engine**, this project focuses on gameplay mechanics, character controls, combat, enemy AI, and level design.
 
----
 
 ## 📌 Project Overview
 
@@ -83,8 +82,8 @@ This project uses a modular subsystem architecture:
 ## 🏃 How to Run the Game
 
 ### 1. Install Godot  
-Download Godot (stable version):  
-https://godotengine.org/download
+- Download Godot (stable version):  
+- https://godotengine.org/download
 
 ### 2. Clone the Repository
 ```bash
@@ -101,10 +100,10 @@ git clone https://github.com/anhDNla/2D-Action-Adventure-Game-.git
 Use your keyboard to move, jump, and attack.
 
 ## 📁 Project Structure
-/scenes          → Levels, enemies, player, UI
-/scripts         → Player, enemy, and combat logic
-/assets          → Sprites, TileSets, animations
-project.godot    → Root Godot project file
+- /scenes          → Levels, enemies, player, UI
+- /scripts         → Player, enemy, and combat logic
+- /assets          → Sprites, TileSets, animations
+- project.godot    → Root Godot project file
 
 ## 🧪 Testing
 - Manual gameplay testing
@@ -121,8 +120,8 @@ Developed by a 4-person team with roles including:
 - UI designer
 
 ## 🧠 Skills
-Godot Engine · GDScript · Game Design · Level Design · AI Programming · Collision Systems
+- Godot Engine · GDScript · Game Design · Level Design · AI Programming · Collision Systems
 Combat Logic · Software Architecture · Git · GitHub · Team Collaboration · Game Testing
 
 ## 📜 License
-This project is for educational and demonstration purposes.
+- This project is for educational and demonstration purposes.
